@@ -2,5 +2,6 @@
 # https://developers.cloudflare.com/pages/functions/wrangler-configuration
 
 name = "rehansworld"
+account_id = "2f16bec967b844aa014199cca5c4625c"
 compatibility_date = "2026-02-23"
 pages_build_output_dir = "build"
