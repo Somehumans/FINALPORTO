@@ -1,0 +1,1815 @@
+/* Project 2 – DinoCode lo-fi layout
+   Light green page background, forest green blocks, black/white text */
+
+.p2-page {
+  min-height: 100vh;
+  background-color: #f5f9f0;
+  padding-bottom: 80px;
+}
+
+/* Header */
+.p2-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #2d5a2d;
+  color: #fff;
+}
+
+.p2-logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.p2-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.p2-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.p2-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Container 2: Case study document (like Joey’s .case-study-document) */
+.p2-case-study-document {
+  max-width: 1400px;
+  margin: 60px auto 80px;
+  background-color: #F4FFE6;
+  border: 20px solid #c8e0c8;
+  border-radius: 30px;
+  padding: 60px 50px 80px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Hero – same structure as Joey: one visual block, then description + tags */
+.p2-hero {
+  width: 100%;
+  background-color: #fff;
+  padding: 80px 40px 60px;
+  margin-bottom: 48px;
+}
+
+.p2-hero-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.p2-hero-visual {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+}
+
+.p2-hero-visual-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f7f2;
+  border-radius: 16px;
+  padding: 48px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.p2-hero-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.p2-dino-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #1a3d1a;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.p2-hero-logo-divider {
+  width: 2px;
+  height: 36px;
+  background-color: #666;
+  margin: 0 12px;
+}
+
+.p2-logo-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e8952e;
+}
+
+.p2-hero-phones-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 280px;
+  height: 100%;
+}
+
+.p2-hero-phone {
+  position: absolute;
+  right: 0;
+  width: 140px;
+  height: 260px;
+  background: #fff;
+  border: 3px solid #2d5a2d;
+  border-radius: 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.p2-hero-phone--back {
+  right: 80px;
+  transform: rotate(-6deg);
+  height: 240px;
+  width: 120px;
+  z-index: 0;
+}
+
+.p2-hero-phone--front {
+  z-index: 1;
+}
+
+.p2-hero-text {
+  max-width: 100%;
+}
+
+.p2-hero-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.p2-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.p2-hero-tag {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #1a3d1a;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .p2-hero {
+    padding: 60px 20px 40px;
+  }
+  .p2-hero-visual {
+    height: 280px;
+  }
+  .p2-hero-visual-inner {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .p2-hero-phones-wrap {
+    min-width: auto;
+    flex: 1;
+  }
+  .p2-hero-phone {
+    width: 100px;
+    height: 180px;
+  }
+  .p2-hero-phone--back {
+    width: 90px;
+    height: 160px;
+    right: 50px;
+  }
+  .p2-case-study-document {
+    margin: 40px 20px 80px;
+    padding: 40px 24px 60px;
+    border-width: 15px;
+    border-radius: 20px;
+  }
+  .p2-case-study-document .project-prompt-banner .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .p2-case-study-document .project-prompt-banner .banner-text {
+    font-size: 20px;
+  }
+}
+
+/* First section: audience pills + Overview + phone mockups (graphic placeholders) */
+.p2-first-section {
+  margin-bottom: 40px;
+}
+
+.p2-audience-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.p2-pill {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.p2-pill--light {
+  background-color: #b8ddb8;
+  color: #1a3d1a;
+}
+
+.p2-pill--dark {
+  background-color: #2d5a2d;
+  color: #fff;
+}
+
+.p2-overview-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.p2-overview-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.p2-overview-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 16px;
+}
+
+.p2-overview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.p2-overview-tag {
+  padding: 8px 16px;
+  background-color: #e8f0e8;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a3d1a;
+}
+
+.p2-phones-box {
+  min-width: 320px;
+  min-height: 280px;
+  flex: 0 1 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.p2-graphic-placeholder {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.p2-phone-mockup {
+  width: 140px;
+  height: 260px;
+}
+
+/* My role: black rounded block, text left + logo & team placeholders right */
+.p2-myrole-block {
+  background-color: #111524;
+  border-radius: 24px;
+  padding: 48px 40px;
+  margin-bottom: 40px;
+}
+
+.p2-myrole-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.p2-myrole-text {
+  flex: 1;
+  min-width: 280px;
+  color: #fff;
+}
+
+.p2-myrole-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 32px;
+}
+
+.p2-role-category {
+  margin-bottom: 28px;
+}
+
+.p2-role-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.p2-role-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.p2-role-list li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.p2-role-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fff;
+}
+
+.p2-myrole-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 260px;
+}
+
+.p2-logo-panel {
+  width: 200px;
+  height: 64px;
+}
+
+.p2-team-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.p2-team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.p2-team-member .p2-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.p2-team-member span {
+  font-size: 14px;
+  color: #fff;
+}
+
+.p2-name-highlight {
+  background-color: #e8952e;
+  color: #1a1a1a !important;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Project prompt banner – same structure as Joey, dark green, no tag */
+.p2-case-study-document .project-prompt-banner.p2-prompt-banner {
+  background-color: #2d5a2d;
+  padding: 50px 60px;
+  border-radius: 45px;
+  margin: 50px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.p2-case-study-document .project-prompt-banner .banner-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.p2-case-study-document .project-prompt-banner .banner-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+/* What's the problem? + Core insight + Hop block (same structure as Joey, placeholders) */
+.p2-problem-core-hop {
+  padding-top: 40px;
+  margin-bottom: 48px;
+}
+
+.p2-problem-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 60px;
+}
+
+.p2-problem-image-placeholder {
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  background-color: #d4e0d4;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px dashed #2d5a2d;
+}
+
+.p2-problem-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.p2-problem-title {
+  font-size: 36px;
+  color: #1E4D0F;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.p2-problem-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #49713A;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.p2-problem-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.p2-problem-description:last-child {
+  margin-bottom: 0;
+}
+
+.p2-core-hop-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.p2-core-insight-block {
+  flex: 1;
+  min-width: 300px;
+}
+
+.p2-core-insight-block .p2-problem-title {
+  margin-bottom: 8px;
+}
+
+.p2-core-insight-block .p2-problem-subtitle {
+  margin-bottom: 16px;
+}
+
+.p2-hop-block {
+  flex: 1;
+  min-width: 400px;
+  background-color: #2d5a2d;
+  border-radius: 45px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 380px;
+}
+
+.p2-hop-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.p2-hop-dino {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.p2-hop-brand {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.p2-hop-phone-placeholder {
+  width: 160px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .p2-problem-row {
+    flex-direction: column;
+  }
+  .p2-problem-image-placeholder {
+    max-width: 100%;
+  }
+  .p2-core-hop-row {
+    flex-direction: column;
+  }
+  .p2-hop-block {
+    min-width: 100%;
+    min-height: 320px;
+  }
+}
+
+/* Lets ask the people for some help (same structure as Joey, white box + creature placeholder) */
+.p2-ask-people-card {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.p2-ask-people-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid #111524;
+  border-radius: 44px;
+  padding: 50px 60px 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.p2-ask-people-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.p2-ask-people-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #FF8D00;
+  margin-bottom: 20px;
+}
+
+.p2-ask-people-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+}
+
+.p2-ask-people-creature {
+  width: 120px;
+  height: 140px;
+  background-color: #b8ddb8;
+  border-radius: 20px 20px 0 0;
+  flex-shrink: 0;
+  align-self: flex-end;
+  border: 2px dashed #2d5a2d;
+}
+
+/* What my search revealed – two columns */
+.p2-what-search-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-what-search-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin-bottom: 24px;
+}
+
+.p2-what-search-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 60px;
+}
+
+.p2-what-search-list li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  padding-left: 24px;
+  position: relative;
+}
+
+.p2-what-search-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2d5a2d;
+  font-weight: bold;
+}
+
+/* Research graph – Learning barriers & Motivation factors */
+.p2-graph-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-graph-row {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.p2-graph-panel {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 28px 32px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.p2-graph-panel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FF9900;
+  margin: 0 0 6px;
+}
+
+.p2-graph-panel-subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 24px;
+}
+
+.p2-graph-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p2-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.p2-bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.p2-bar-label {
+  font-size: 15px;
+  color: #1F2937;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+}
+
+.p2-bar-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+  flex-shrink: 0;
+}
+
+.p2-bar-track {
+  width: 100%;
+  height: 28px;
+  background-color: #F2F2F2;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p2-bar-fill {
+  height: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  min-width: 56px;
+  box-sizing: border-box;
+}
+
+.p2-bar-fill span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.p2-bar-fill--dark-text span {
+  color: #1F2937;
+}
+
+/* Learning barriers – purple shades (deeper → lighter) */
+.p2-bar-fill--purple-92 { background-color: #6B4B8A; }
+.p2-bar-fill--purple-83 { background-color: #7B5BA8; }
+.p2-bar-fill--purple-75 { background-color: #8B6BB8; }
+.p2-bar-fill--purple-67 { background-color: #9B7BC4; }
+.p2-bar-fill--purple-58 { background-color: #B08FD4; }
+
+/* Motivation factors – green shades (vibrant → lighter) */
+.p2-bar-fill--green-100 { background-color: #36D07F; }
+.p2-bar-fill--green-92 { background-color: #67E298; }
+.p2-bar-fill--green-83 { background-color: #A3ECC0; }
+.p2-bar-fill--green-75 { background-color: #D4F6E1; }
+
+/* Key takeaways from my research – single dark green container, 3 cards (Ref) */
+.p2-key-takeaways-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-key-takeaways-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 24px;
+}
+
+.p2-key-takeaways-card {
+  background-color: #2d5a2d;
+  border-radius: 24px;
+  width: 100%;
+  padding: 32px 40px 40px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px 40px;
+  align-content: start;
+}
+
+.p2-takeaway-item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.p2-takeaway-icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.p2-takeaway-icon-symbol {
+  font-size: 36px;
+  line-height: 1;
+  color: #2d5a2d;
+}
+
+.p2-takeaway-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.p2-takeaway-line1,
+.p2-takeaway-line2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 4px;
+  line-height: 1.45;
+}
+
+.p2-takeaway-line2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .p2-key-takeaways-card {
+    grid-template-columns: 1fr;
+    padding: 28px 24px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p2-key-takeaways-title {
+    font-size: 32px;
+  }
+  .p2-ask-people-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px;
+  }
+  .p2-ask-people-creature {
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+  .p2-ask-people-title {
+    font-size: 32px;
+  }
+  .p2-what-search-list {
+    grid-template-columns: 1fr;
+  }
+  .p2-what-search-title {
+    font-size: 32px;
+  }
+  .p2-graph-panel {
+    max-width: none;
+  }
+}
+
+/* So who is DinoCode for? – persona (Ref: SVG in ref folder) */
+.p2-who-is-for-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-who-is-for-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 28px;
+}
+
+.p2-persona-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.p2-persona-avatar {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  min-height: 160px;
+  border-radius: 50%;
+  background-color: #7b5ba8;
+  flex-shrink: 0;
+}
+
+.p2-persona-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.p2-persona-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.p2-persona-role {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  color: #49713A;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.p2-persona-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111524;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .p2-who-is-for-title {
+    font-size: 32px;
+  }
+  .p2-persona-avatar {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+}
+
+/* LOFI (tradesworker) – wireframe screens */
+.p2-lofi-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-lofi-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* What went wrong – context + feedback box (Ref: character SVG in ref folder) */
+.p2-what-went-wrong-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-what-went-wrong-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 12px;
+}
+
+.p2-what-went-wrong-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #49713A;
+  margin: 0 0 12px;
+}
+
+.p2-what-went-wrong-context {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111524;
+  margin: 0 0 24px;
+  max-width: 720px;
+}
+
+.p2-feedback-box {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 32px 40px 40px;
+  box-sizing: border-box;
+}
+
+.p2-feedback-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.p2-feedback-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.p2-feedback-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #FF8D00;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.p2-feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.p2-feedback-list li {
+  margin-bottom: 18px;
+  padding-left: 0;
+}
+
+.p2-feedback-list li:last-child {
+  margin-bottom: 0;
+}
+
+.p2-feedback-item-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  color: #FF8D00;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.p2-feedback-item-desc {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111524;
+  line-height: 1.6;
+}
+
+.p2-feedback-character {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  min-height: 160px;
+  flex-shrink: 0;
+  background-color: #b8ddb8;
+  border-radius: 50%;
+}
+
+/* Original design – four screen mockups (Ref: Frame 446.svg) */
+.p2-original-design-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-original-design-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 24px;
+}
+
+.p2-original-design-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* How my design changed – left: visual (Ref: Frame 447.svg), right: text */
+.p2-design-changed-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+  background: none;
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-sizing: border-box;
+}
+
+.p2-design-changed-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.p2-design-changed-visual {
+  flex: 1;
+  min-width: 280px;
+  max-width: 480px;
+}
+
+.p2-design-changed-placeholder {
+  width: 100%;
+  min-height: 380px;
+  background-color: #b8ddb8;
+  border-radius: 20px;
+}
+
+.p2-design-changed-content {
+  flex: 1;
+  min-width: 320px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 36px 40px;
+  box-sizing: border-box;
+}
+
+.p2-design-changed-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.p2-design-changed-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111524;
+  margin: 0 0 24px;
+}
+
+.p2-design-changed-block {
+  margin-bottom: 20px;
+}
+
+.p2-design-changed-block:last-child {
+  margin-bottom: 0;
+}
+
+.p2-design-changed-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d5a2d;
+  margin: 0 0 10px;
+}
+
+.p2-design-changed-item {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111524;
+  margin: 0 0 8px;
+}
+
+.p2-design-changed-item strong {
+  font-weight: 700;
+  font-style: italic;
+  color: #49713A;
+}
+
+.p2-design-changed-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .p2-design-changed-section {
+    padding: 32px 20px;
+  }
+  .p2-design-changed-content {
+    padding: 28px 24px;
+  }
+  .p2-design-changed-title {
+    font-size: 24px;
+  }
+  .p2-design-changed-placeholder {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p2-what-went-wrong-title {
+    font-size: 32px;
+  }
+  .p2-feedback-heading {
+    font-size: 32px;
+  }
+  .p2-feedback-box {
+    padding: 24px 20px 32px;
+  }
+  .p2-feedback-character {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    align-self: flex-end;
+  }
+  .p2-original-design-title {
+    font-size: 32px;
+  }
+}
+
+/* Homepage – phone left, text right (like Joey design-change-block--phone-left) */
+.p2-design-change-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-design-change-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 560px;
+  margin-bottom: 56px;
+  gap: 56px;
+}
+
+.p2-design-change-block:last-child {
+  margin-bottom: 0;
+}
+
+.p2-design-change-block--phone-left {
+  flex-direction: row;
+}
+
+/* Text left, phone right (default DOM order: text then phone) */
+.p2-design-change-block--text-left {
+  flex-direction: row;
+}
+
+.p2-design-change-phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.p2-design-change-phone-frame {
+  width: 280px;
+  height: 560px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.p2-design-change-phone-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  display: block;
+  vertical-align: top;
+}
+
+.p2-design-change-text {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: left;
+}
+
+.p2-design-change-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.p2-design-change-body {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.p2-design-change-body:last-of-type {
+  margin-bottom: 0;
+}
+
+.p2-design-change-label {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  color: #49713A;
+  margin: 20px 0 8px;
+}
+
+.p2-design-change-list {
+  margin: 0 0 0 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.p2-design-change-list li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .p2-design-change-block {
+    flex-direction: column;
+    min-height: 0;
+    gap: 32px;
+  }
+  .p2-design-change-block--phone-left .p2-design-change-phone {
+    order: 1;
+  }
+  .p2-design-change-block--phone-left .p2-design-change-text {
+    order: 2;
+  }
+  .p2-design-change-block--text-left .p2-design-change-text {
+    order: 1;
+  }
+  .p2-design-change-block--text-left .p2-design-change-phone {
+    order: 2;
+  }
+  .p2-design-change-phone-frame {
+    width: 260px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .p2-design-change-subtitle {
+    font-size: 20px;
+  }
+  .p2-design-change-body,
+  .p2-design-change-list {
+    font-size: 16px;
+  }
+}
+
+/* New learner path (first-time) – flowchart (Ref: SVG in ref folder) */
+.p2-learner-path-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: none;
+}
+
+.p2-learner-path-panel {
+  background-color: #2d5a2d;
+  border-radius: 20px;
+  padding: 28px 40px 40px;
+  box-sizing: border-box;
+}
+
+.p2-learner-path-panel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.p2-learner-path-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.p2-path-step {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #fff;
+  color: #111524;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.p2-path-arrow {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  padding: 6px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .p2-learner-path-panel {
+    padding: 24px 20px 32px;
+  }
+  .p2-learner-path-panel-title {
+    font-size: 18px;
+  }
+}
+
+.p2-subhead {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1E4D0F;
+  margin: 0 0 16px;
+}
+
+.p2-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E4D0F;
+  margin: 0 0 12px;
+}
+
+.p2-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+/* About row */
+.p2-about-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.p2-about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Green block (reusable) */
+.p2-green-block {
+  background-color: #2d5a2d;
+  color: #fff;
+  padding: 40px 32px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+}
+
+.p2-green-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.p2-green-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.p2-green-box {
+  background-color: #2d5a2d;
+  padding: 32px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.p2-two-phones {
+  min-height: 200px;
+}
+
+.p2-phone-placeholder {
+  width: 120px;
+  height: 220px;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+}
+
+.p2-phone-angled {
+  transform: rotate(-8deg);
+}
+
+.p2-phone-red {
+  border-color: #c44;
+  background: #fef0f0;
+}
+
+/* Team */
+.p2-team-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.p2-team-photos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.p2-team-photos span {
+  font-size: 14px;
+  color: #fff;
+}
+
+.p2-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.p2-avatar.p2-large {
+  width: 80px;
+  height: 80px;
+}
+
+/* Section */
+.p2-section {
+  margin-bottom: 48px;
+}
+
+.p2-image-placeholder {
+  height: 200px;
+  background: #e0e8dc;
+  border-radius: 16px;
+}
+
+.p2-image-placeholder.p2-wide {
+  min-width: 280px;
+  flex: 1;
+}
+
+.p2-who-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.p2-who-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.p2-green-box.p2-single-phone {
+  min-width: 160px;
+}
+
+/* Outline box (Key Features, Tech Stack) */
+.p2-outline-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px;
+  border: 2px dashed #2d5a2d;
+  border-radius: 24px;
+  min-height: 140px;
+}
+
+.p2-placeholder-text {
+  color: #666;
+  margin: 0;
+}
+
+.p2-mascot {
+  width: 80px;
+  height: 80px;
+  background: #b8ddb8;
+  border-radius: 50%;
+}
+
+/* Impact / progress */
+.p2-impact-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+  .p2-impact-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p2-progress-item {
+  margin-bottom: 16px;
+}
+
+.p2-progress-item span:first-child {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.p2-progress-item span:nth-child(2) {
+  font-size: 14px;
+  color: #666;
+}
+
+.p2-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  max-width: 100%;
+}
+
+.p2-progress-purple {
+  background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+  width: 75%;
+}
+
+.p2-progress-teal {
+  background: linear-gradient(90deg, #0d9488 0%, #5eead4 100%);
+  width: 80%;
+}
+
+.p2-benefits-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.p2-benefit-card {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
+.p2-benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d5a2d;
+}
+
+/* Contact */
+.p2-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.p2-contact-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.p2-form-block {
+  flex: 1;
+  min-width: 320px;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.p2-form-field {
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.p2-form-field-tall {
+  height: 100px;
+}
+
+.p2-form-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.p2-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  background: #2d5a2d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.p2-btn-outline {
+  background: transparent;
+  border: 2px solid #2d5a2d;
+  color: #2d5a2d;
+}
+
+/* Phones row */
+.p2-phones-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.p2-phone-wireframe {
+  width: 100px;
+  height: 180px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+}
+
+/* Implementation row */
+.p2-impl-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.p2-impl-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.p2-split {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.p2-split > div:first-child {
+  flex: 1;
+  min-width: 280px;
+}
+
+.p2-phone-placeholder.p2-single {
+  width: 140px;
+  height: 260px;
+}
+
+.p2-download-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.p2-green-box.p2-download-phone {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Case study nav */
+.p2-case-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #c8e0c8;
+}
+
+.p2-nav-link {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d5a2d;
+  background: #fff;
+  border: 2px solid #2d5a2d;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.p2-nav-link:hover {
+  background: #f5f9f0;
+}
+
+.p2-nav-link-next {
+  background: #2d5a2d;
+  color: #fff;
+}
+
+.p2-nav-link-next:hover {
+  background: #1a3d1a;
+  color: #fff;
+}

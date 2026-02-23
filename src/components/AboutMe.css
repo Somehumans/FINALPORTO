@@ -1,0 +1,107 @@
+.about-me {
+  width: 100%;
+  padding: 80px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 60px auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.skill-tag {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.about-image-placeholder {
+  width: 350px;
+  height: 450px;
+  background-color: #ddd;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
+/* Scrolling icons animation */
+.icons-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.icons-scroll {
+  display: flex;
+  gap: 30px;
+  animation: scroll-left 20s linear infinite;
+}
+
+.icons-scroll.reverse {
+  animation: scroll-right 20s linear infinite;
+}
+
+.icon-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #999;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image-placeholder {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
