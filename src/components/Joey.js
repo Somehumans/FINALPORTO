@@ -319,7 +319,7 @@ const Joey = () => {
       <section className="hifi-results-section">
         <h2 className="hifi-results-title">Hop to it. Results</h2>
         <img
-          src="/hifi-screens.svg"
+          src="/hifis-screens.png"
           alt="Five HIFI Joey app screens: Welcome Maya dashboard, Jobs list, Describe your issue to AI, Listing detail, Account profile"
           className="hifi-results-svg"
         />
