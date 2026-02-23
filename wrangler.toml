@@ -1,7 +1,10 @@
 # Cloudflare Pages - rehansworld
 # https://developers.cloudflare.com/pages/functions/wrangler-configuration
 
+"$schema" = "./node_modules/wrangler/config-schema.json"
 name = "rehansworld"
-account_id = "2f16bec967b844aa014199cca5c4625c"
 compatibility_date = "2026-02-23"
 pages_build_output_dir = "build"
+
+[vars]
+API_KEY = "b80aac717fb9b7909d983a2fa344cc308b67b"
