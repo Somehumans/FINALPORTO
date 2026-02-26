@@ -192,13 +192,112 @@ const Joey = () => {
           </ul>
         </section>
 
-        {/* Research graph - SVG from Ref/New/Container.svg */}
+        {/* Research graph – coded bar charts (Homeowner trust signals / Tradesworker priorities) */}
         <section className="research-graph-section">
-          <img
-            src="/research-graph.svg"
-            alt="Homeowner trust signals and Tradesworker priorities bar charts showing survey results"
-            className="research-graph-img"
-          />
+          <div className="research-graph-row">
+            <div className="research-graph-panel">
+              <h3 className="research-graph-panel-title">Homeowner trust signals</h3>
+              <p className="research-graph-panel-subtitle">What homeowners look for when hiring (%)</p>
+              <div className="research-graph-bars">
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Photos of past work</span>
+                    <span className="research-bar-count">12/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-100" style={{ width: '100%' }}><span>100%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Reviews &amp; ratings</span>
+                    <span className="research-bar-count">11/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-92" style={{ width: '92%' }}><span>92%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Verification badge</span>
+                    <span className="research-bar-count">10/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-83" style={{ width: '83%' }}><span>83%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Clear pricing / scope</span>
+                    <span className="research-bar-count">9/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-75" style={{ width: '75%' }}><span>75%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Portfolio or profile completeness</span>
+                    <span className="research-bar-count">8/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-67" style={{ width: '67%' }}><span>67%</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="research-graph-panel">
+              <h3 className="research-graph-panel-title">Tradesworker priorities</h3>
+              <p className="research-graph-panel-subtitle">What workers want from the platform (%)</p>
+              <div className="research-graph-bars">
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Fair pay &amp; clear terms</span>
+                    <span className="research-bar-count">12/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-100" style={{ width: '100%' }}><span>100%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Direct contact with homeowner</span>
+                    <span className="research-bar-count">11/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-92" style={{ width: '92%' }}><span>92%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Portfolio visibility</span>
+                    <span className="research-bar-count">10/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-83" style={{ width: '83%' }}><span>83%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Safe / protected payment</span>
+                    <span className="research-bar-count">9/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-75" style={{ width: '75%' }}><span>75%</span></div>
+                  </div>
+                </div>
+                <div className="research-bar-item">
+                  <div className="research-bar-top">
+                    <span className="research-bar-label">Clear job scope before accepting</span>
+                    <span className="research-bar-count">8/12</span>
+                  </div>
+                  <div className="research-bar-track">
+                    <div className="research-bar-fill research-bar-fill--orange-67 research-bar-fill--dark-text" style={{ width: '67%' }}><span>67%</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Key takeaways from my research (Ref Frame 413) */}
@@ -241,21 +340,66 @@ const Joey = () => {
           alt="Two user personas: Armiya (Homeowner) and Maya (Tradesworker) with descriptions"
           className="who-is-joey-svg"
         />
-        <img
-          src="/user-paths.svg"
-          alt="Homeowner path and Tradesworker path flowcharts: steps from sign up to job completion or ready to receive requests"
-          className="who-is-joey-paths-svg"
-        />
+        <div className="user-paths" role="img" aria-label="Homeowner path and Tradesworker path flowcharts">
+          <div className="user-path">
+            <h3 className="user-path-title">Homeowner path</h3>
+            <div className="user-path-steps">
+              <div className="user-path-step">Sign up</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Create job with AI help (images + notes)</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Matched list of workers</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Chat</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Offer</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Escrow-style payment</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Job completion</div>
+            </div>
+          </div>
+          <div className="user-path">
+            <h3 className="user-path-title">Tradesworker path</h3>
+            <div className="user-path-steps">
+              <div className="user-path-step">Sign up</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Submit credentials</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">AI-assisted verification summary</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Profile build</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Portfolio (photos/videos + work history)</div>
+              <div className="user-path-arrow" aria-hidden="true">↓</div>
+              <div className="user-path-step">Ready to receive requests</div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Tradesworker journey – LOFI mobile screens (Ref Frame 422) */}
+      {/* Tradesworker journey – LOFI: 5 screen images (1–5.png) */}
       <section className="tradesworker-lofi-section">
         <h2 className="tradesworker-lofi-title">Tradesworker journey</h2>
-        <img
-          src="/tradesworker-lofi-screens.svg"
-          alt="Five LOFI mobile screens: Verifying you, Your Portfolio, Profile Preview, AI help, Welcome dashboard"
-          className="tradesworker-lofi-svg"
-        />
+        <div className="tradesworker-lofi-panel">
+          <div className="tradesworker-lofi-screens">
+            <div className="lofi-screen-placeholder">
+              <img src="/1.png" alt="Verifying you – LOFI screen" className="lofi-screen-img" />
+            </div>
+            <div className="lofi-screen-placeholder">
+              <img src="/2.png" alt="Your Portfolio – LOFI screen" className="lofi-screen-img" />
+            </div>
+            <div className="lofi-screen-placeholder">
+              <img src="/3.png" alt="Profile Preview – LOFI screen" className="lofi-screen-img" />
+            </div>
+            <div className="lofi-screen-placeholder">
+              <img src="/4.png" alt="AI help – LOFI screen" className="lofi-screen-img" />
+            </div>
+            <div className="lofi-screen-placeholder">
+              <img src="/5.png" alt="Welcome, Joe – LOFI screen" className="lofi-screen-img" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* How my design changed with research & feedback (Ref: Trust/Job/Pay phone SVGs) */}

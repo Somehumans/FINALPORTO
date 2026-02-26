@@ -57,7 +57,7 @@
   background-color: #ffddcc;
 }
 
-/* Case Study Document Container - peach border wraps all content */
+/* Case Study Document Container - full-width alignment, consistent padding */
 .case-study-document {
   max-width: 1400px;
   margin: 60px auto 0;
@@ -65,14 +65,16 @@
   border: 20px solid #ffddcc;
   border-radius: 30px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  padding: 60px 50px 80px;
+  padding: 60px 70px 80px;
   overflow: visible;
+  box-sizing: border-box;
 }
 
 /* Overview Section - flow content inside document */
 .overview-header {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .case-study-document .joey-section.white-bg {
@@ -133,21 +135,22 @@
   gap: 20px;
 }
 
-/* My Role Section - card (Ref Frame 426) */
+/* My Role Section - rounded card, aligned with problem section (max-width 1200px) */
 .my-role-section {
   background-color: #111524;
+  max-width: 1200px;
+  margin: 50px auto;
   padding: 60px 50px;
   border-radius: 45px;
-  margin: 50px 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 .section-content-split {
   display: flex;
   gap: 60px;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .my-role-text {
@@ -209,18 +212,19 @@
   border-radius: 45px;
 }
 
-/* Project Prompt - card (Ref Frame 409) */
+/* Project Prompt - rounded card, aligned with problem section (max-width 1200px) */
 .project-prompt-banner {
   background-color: #FA7D25;
+  max-width: 1200px;
+  margin: 50px auto;
   padding: 50px 60px;
   border-radius: 45px;
-  margin: 50px 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .banner-content {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -257,7 +261,7 @@
   flex-shrink: 0;
 }
 
-/* Problem + Core Insight + Hop To It - design layout */
+/* Problem + Core Insight + Hop To It - alignment reference (1200px band) */
 .problem-core-hop {
   padding-top: 40px;
 }
@@ -381,7 +385,7 @@
 }
 
 .ask-people-inner {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
   border: 3px solid #111524;
@@ -479,26 +483,132 @@
   font-weight: bold;
 }
 
-/* Research graph - SVG */
+/* Research graph – coded bar charts (like DinoCode) */
 .research-graph-section {
   margin-top: 60px;
   width: 100%;
-}
-
-.research-graph-img {
-  width: 100%;
-  max-width: 1176px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Key takeaways from my research (Ref Frame 416.svg) – same section spacing as what-search */
-.key-takeaways-section {
-  margin-top: 60px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.research-graph-row {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.research-graph-panel {
+  flex: 1;
+  min-width: 280px;
+  max-width: 520px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 28px 32px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.research-graph-panel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #FA7D25;
+  margin: 0 0 6px;
+}
+
+.research-graph-panel-subtitle {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 24px;
+}
+
+.research-graph-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.research-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.research-bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.research-bar-label {
+  font-size: 15px;
+  color: #1F2937;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+}
+
+.research-bar-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F2937;
+  flex-shrink: 0;
+}
+
+.research-bar-track {
+  width: 100%;
+  height: 28px;
+  background-color: #F2F2F2;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.research-bar-fill {
+  height: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  min-width: 56px;
+  box-sizing: border-box;
+}
+
+.research-bar-fill span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.research-bar-fill--dark-text span {
+  color: #1F2937;
+}
+
+.research-bar-fill--orange-100 { background-color: #FA7D25; }
+.research-bar-fill--orange-92 { background-color: #FB8F3D; }
+.research-bar-fill--orange-83 { background-color: #FCa155; }
+.research-bar-fill--orange-75 { background-color: #FDB36D; }
+.research-bar-fill--orange-67 { background-color: #FEC585; }
+
+@media (max-width: 768px) {
+  .research-graph-panel {
+    max-width: none;
+  }
+}
+
+/* Key takeaways – same 1200px band as research graph, problem, etc. */
+.key-takeaways-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .key-takeaways-title {
@@ -508,14 +618,15 @@
   margin-bottom: 24px;
 }
 
-/* Card per Frame 416: 1168×289 rx45, circles at x=32,426,820 y=26 */
+/* Card – full width of band so edges align with rest of content */
 .key-takeaways-card {
   background-color: #FA7D25;
   border-radius: 45px;
   width: 100%;
-  max-width: 1168px;
+  max-width: 1200px;
   min-height: 289px;
-  padding: 26px 0 40px 32px;
+  padding: 26px 32px 40px 32px;
+  margin: 0;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 394px 394px 348px;
@@ -601,26 +712,76 @@
   display: block;
 }
 
-.who-is-joey-paths-svg {
-  width: 100%;
-  max-width: 1072px;
-  height: auto;
-  display: block;
+/* User paths – two vertical flowcharts, no fill, white step boxes, down arrows */
+.user-paths {
   margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  max-width: 930px;
+  padding: 0;
+  background: none;
+  box-sizing: border-box;
+}
+
+.user-path {
+  flex: 1;
+  min-width: 260px;
+  background: transparent;
+}
+
+.user-path-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.user-path-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.user-path-step {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1F2937;
+  background-color: #fff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.user-path-arrow {
+  color: #374151;
+  font-size: 18px;
+  line-height: 1;
+  padding: 8px 0;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .who-is-joey-title {
     font-size: 32px;
   }
-  .who-is-joey-paths-svg {
+  .user-paths {
     margin-top: 32px;
+    flex-direction: column;
   }
 }
 
-/* Tradesworker journey – LOFI screens (Ref Frame 422) */
+/* Tradesworker journey – LOFI: orange fill card, 5 small grey placeholders (phone ratio, touching) */
 .tradesworker-lofi-section {
   margin-top: 60px;
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -633,16 +794,52 @@
   margin-bottom: 24px;
 }
 
-.tradesworker-lofi-svg {
+.tradesworker-lofi-panel {
   width: 100%;
-  max-width: 1170px;
-  height: auto;
+  border-radius: 20px;
+  padding: 28px 24px 32px;
+  background-color: #FA7D25;
+  box-sizing: border-box;
+}
+
+.tradesworker-lofi-screens {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.lofi-screen-placeholder {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 9 / 19;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lofi-screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
 }
 
 @media (max-width: 768px) {
   .tradesworker-lofi-title {
     font-size: 32px;
+  }
+  .tradesworker-lofi-screens {
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+  }
+  .lofi-screen-placeholder {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 9 / 19;
   }
 }
 
@@ -695,7 +892,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 32px 24px 48px;
-  background-color: #FDF8F3;
+  background: none;
   box-sizing: border-box;
 }
 
@@ -765,16 +962,17 @@
 }
 
 .outcome-right {
-  width: 48%;
-  min-width: 320px;
-  background-color: #F08E4F;
-  border-radius: 0 24px 24px 0;
-  padding: 40px 32px;
+  flex: 1;
+  min-width: 400px;
+  background-color: #FA7D25;
+  border-radius: 45px;
+  padding: 50px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 380px;
 }
 
 .outcome-joey-is {
@@ -822,8 +1020,8 @@
     padding-bottom: 32px;
   }
   .outcome-right {
-    width: 100%;
-    min-width: auto;
+    min-width: 100%;
+    min-height: 320px;
     border-radius: 24px;
     padding: 32px 24px;
   }
@@ -1348,6 +1546,7 @@
 
   .case-study-document {
     margin: 40px 20px 0;
+    padding: 40px 24px 60px;
     border-width: 15px;
     border-radius: 20px;
   }

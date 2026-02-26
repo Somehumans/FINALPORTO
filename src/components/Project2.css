@@ -37,14 +37,14 @@
   text-decoration: underline;
 }
 
-/* Container 2: Case study document (like Joey’s .case-study-document) */
+/* Container 2: Case study document – consistent padding, alignment like Joey */
 .p2-case-study-document {
   max-width: 1400px;
   margin: 60px auto 80px;
   background-color: #F4FFE6;
   border: 20px solid #c8e0c8;
   border-radius: 30px;
-  padding: 60px 50px 80px;
+  padding: 60px 70px 80px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
@@ -299,7 +299,9 @@
   background-color: #111524;
   border-radius: 24px;
   padding: 48px 40px;
-  margin-bottom: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  box-sizing: border-box;
 }
 
 .p2-myrole-content {
@@ -402,18 +404,20 @@
   font-weight: 600;
 }
 
-/* Project prompt banner – same structure as Joey, dark green, no tag */
+/* Project prompt banner – rounded card, aligned with problem section (1200px) */
 .p2-case-study-document .project-prompt-banner.p2-prompt-banner {
   background-color: #2d5a2d;
   padding: 50px 60px;
   border-radius: 45px;
-  margin: 50px 0;
+  max-width: 1200px;
+  margin: 50px auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .p2-case-study-document .project-prompt-banner .banner-content {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -440,9 +444,8 @@
   justify-content: space-between;
   gap: 60px;
   align-items: center;
-  width: 100%;
-  max-width: none;
-  margin: 0 0 60px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .p2-problem-image-placeholder {
@@ -491,9 +494,8 @@
   justify-content: space-between;
   gap: 60px;
   align-items: center;
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .p2-core-insight-block {
@@ -660,7 +662,9 @@
 .p2-graph-section {
   margin-top: 60px;
   width: 100%;
-  max-width: none;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .p2-graph-row {

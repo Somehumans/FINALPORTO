@@ -5,20 +5,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.view-work-btn {
-  padding: 15px 40px;
-  font-size: 18px;
-  background-color: #555;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.landing-parallax {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.view-work-btn:hover {
-  background-color: #333;
+.landing-hill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  will-change: transform;
 }
+
+.landing-hill-4 { z-index: 1; }  /* bottom/back */
+.landing-hill-3 { z-index: 2; }
+.landing-hill-2 { z-index: 3; }
+.landing-cloud { z-index: 4; }   /* between hill 2 and 1 */
+.landing-hill-1 { z-index: 5; }  /* top/front */
+
+.landing-cloud {
+  position: absolute;
+  bottom: 11.5%;
+  right: 0;
+  will-change: transform;
+}
+
+.landing-cloud-inner {
+  transform: translateX(50%);
+}
+
+.landing-cloud img {
+  width: auto;
+  height: auto;
+  max-width: min(45vw, 420px);
+  max-height: 50vh;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+}
+
+.landing-hill img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  object-position: bottom center;
+  display: block;
+}
+
 
