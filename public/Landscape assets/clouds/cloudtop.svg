@@ -1,21 +1,35 @@
-<svg width="157" height="131" viewBox="0 0 157 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 63.3105 56.6399)" fill="#FEFFFF"/>
-<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 152.751 56.6399)" fill="#FEFFFF"/>
-<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 101.415 28.0454)" fill="#FEFFFF"/>
-<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 31.0276 28.0454)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 112.807 45.0427)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 128.105 56.9409)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 95.8097 33.9946)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 30.37 16.9973)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 51.6166 0)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 73.7131 11.0481)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 82.2118 22.9463)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 40.5684 5.94897)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 9.97314 11.0481)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 151.901 79.0374)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 151.901 62.04)" fill="#FEFFFF"/>
-<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 157 71.3887)" fill="#FEFFFF"/>
-<ellipse cx="25.496" cy="16.9973" rx="25.496" ry="16.9973" transform="matrix(-1 0 0 1 107.708 96.0347)" fill="#FEFFFF"/>
-<ellipse cx="22.5214" cy="16.9973" rx="22.5214" ry="16.9973" transform="matrix(-1 0 0 1 65.2145 88.386)" fill="#FEFFFF"/>
-<ellipse cx="36.1193" cy="16.9973" rx="36.1193" ry="16.9973" transform="matrix(-1 0 0 1 137.453 90.9355)" fill="#FEFFFF"/>
+<svg width="317" height="131" viewBox="0 0 317 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 145.327 50.9919)" fill="#FEFFFF"/>
+<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 223.311 56.6399)" fill="#FEFFFF"/>
+<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 312.751 56.6399)" fill="#FEFFFF"/>
+<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 261.416 28.0454)" fill="#FEFFFF"/>
+<ellipse cx="70.6523" cy="34.1451" rx="70.6523" ry="34.1451" transform="matrix(-1 0 0 1 191.028 28.0454)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 272.807 45.0427)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 288.104 56.9409)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 255.81 33.9946)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 190.37 16.9973)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 211.617 0)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 233.713 11.0481)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 242.212 22.9463)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 200.568 5.94897)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 169.973 11.0481)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 158.075 0)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 139.378 0)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 138.528 5.94897)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 122.381 11.0481)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 98.5845 11.0481)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 84.1367 28.0454)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 74.7881 39.9436)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 50.1421 50.9919)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 38.2439 62.04)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 33.9946 71.3887)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 38.2439 79.0374)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 311.901 79.0374)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 311.901 62.04)" fill="#FEFFFF"/>
+<circle cx="16.9973" cy="16.9973" r="16.9973" transform="matrix(-1 0 0 1 317 71.3887)" fill="#FEFFFF"/>
+<ellipse cx="25.496" cy="16.9973" rx="25.496" ry="16.9973" transform="matrix(-1 0 0 1 267.708 96.0347)" fill="#FEFFFF"/>
+<ellipse cx="22.5214" cy="16.9973" rx="22.5214" ry="16.9973" transform="matrix(-1 0 0 1 225.214 88.386)" fill="#FEFFFF"/>
+<ellipse cx="35.6944" cy="16.9973" rx="35.6944" ry="16.9973" transform="matrix(-1 0 0 1 134.279 90.9355)" fill="#FEFFFF"/>
+<ellipse cx="36.1193" cy="16.9973" rx="36.1193" ry="16.9973" transform="matrix(-1 0 0 1 96.8848 90.9355)" fill="#FEFFFF"/>
+<ellipse cx="36.1193" cy="16.9973" rx="36.1193" ry="16.9973" transform="matrix(-1 0 0 1 297.453 90.9355)" fill="#FEFFFF"/>
 </svg>
