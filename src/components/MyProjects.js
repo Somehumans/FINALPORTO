@@ -5,9 +5,9 @@ import "./MyProjects.css";
 const MyProjects = () => {
   // Placeholder projects
   const projects = [
-    { id: 1, title: "Project 1", link: "/casestudy-joey" },
-    { id: 2, title: "Project 2", link: "/casestudy-project2" },
-    { id: 3, title: "Project 3", link: null },
+    { id: 1, title: "Project 1", link: "/casestudy-joey",       img: "/aboutme/JoeyP1.svg" },
+    { id: 2, title: "Project 2", link: "/casestudy-project2",   img: "/aboutme/DinoCodeP2.svg" },
+    { id: 3, title: "Project 3", link: null,                    img: null },
   ];
 
   return (
@@ -26,7 +26,10 @@ const MyProjects = () => {
               className="project-card-link"
             >
               <div className="project-card">
-                <div className="project-image-placeholder"></div>
+                {project.img
+                  ? <img src={project.img} alt={project.title} className="project-card-img" />
+                  : <div className="project-image-placeholder"></div>
+                }
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -36,7 +39,10 @@ const MyProjects = () => {
             </Link>
           ) : (
             <div key={project.id} className="project-card">
-              <div className="project-image-placeholder"></div>
+              {project.img
+                ? <img src={project.img} alt={project.title} className="project-card-img" />
+                : <div className="project-image-placeholder"></div>
+              }
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do

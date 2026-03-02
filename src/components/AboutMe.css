@@ -1,107 +1,129 @@
 .about-me {
   width: 100%;
-  padding: 80px 40px;
   background-color: #fff;
-  text-align: center;
+  overflow: hidden;
 }
 
+/* ── Ticker ── */
+.skills-ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  padding: 28px 0;
+  background-color: #fff;
+}
+
+.skills-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker-left 28s linear infinite;
+}
+
+.skills-ticker--reverse {
+  animation: ticker-right 32s linear infinite;
+}
+
+.ticker-icon {
+  flex-shrink: 0;
+  border-radius: 14px;
+  display: block;
+  user-select: none;
+  margin-right: 24px; /* trailing gap included so -50% lands exactly on seam */
+}
+
+@keyframes ticker-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes ticker-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* ── Content ── */
 .about-content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 60px;
-  max-width: 1200px;
-  margin: 60px auto;
-  flex-wrap: wrap;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 48px;
 }
 
+/* ── Text column ── */
 .about-text {
   flex: 1;
-  min-width: 300px;
-  text-align: left;
+  min-width: 280px;
+}
+
+.about-heading {
+  font-size: 52px;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 28px;
+  line-height: 1.1;
+}
+
+.about-highlight {
+  color: #FA7D25;
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 18px;
 }
 
-.skills {
+.skill-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .skill-tag {
-  padding: 8px 16px;
-  background-color: #f0f0f0;
+  padding: 7px 16px;
+  background-color: #C6F135;
   border-radius: 20px;
-  font-size: 14px;
-  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
-.about-image-placeholder {
-  width: 350px;
-  height: 450px;
-  background-color: #ddd;
-  border-radius: 30px;
+/* ── Photo column ── */
+.about-photo-wrap {
   flex-shrink: 0;
-}
-
-/* Scrolling icons animation */
-.icons-scroll-container {
-  width: 100%;
+  width: 360px;
+  height: 460px;
+  border-radius: 28px;
   overflow: hidden;
-  margin: 40px 0;
+  background-color: #111;
 }
 
-.icons-scroll {
-  display: flex;
-  gap: 30px;
-  animation: scroll-left 20s linear infinite;
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
-.icons-scroll.reverse {
-  animation: scroll-right 20s linear infinite;
-}
-
-.icon-placeholder {
-  width: 60px;
-  height: 60px;
-  background-color: #999;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 768px) {
+/* ── Responsive ── */
+@media (max-width: 860px) {
   .about-content {
     flex-direction: column;
+    padding: 48px 24px;
+    gap: 48px;
   }
 
-  .about-image-placeholder {
+  .about-photo-wrap {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
+    height: 420px;
+  }
+
+  .about-heading {
+    font-size: 40px;
   }
 }
-
