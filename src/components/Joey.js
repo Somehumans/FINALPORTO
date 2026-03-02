@@ -18,7 +18,11 @@ const Joey = () => {
       {/* Hero Section - Outside Document */}
       <section className="joey-hero-main">
         <div className="joey-hero-content">
-          <div className="joey-hero-image-placeholder"></div>
+          <img 
+            src="/joeydocassets/hero.svg" 
+            alt="Joey app - Hop to it. Two mobile phone mockups showing the Joey app interface"
+            className="joey-hero-image"
+          />
           <div className="joey-hero-text">
             <p className="joey-description">
               Joey is an AI-powered platform that connects homeowners with skilled tradespeople 
@@ -40,31 +44,30 @@ const Joey = () => {
         
         {/* Overview Section */}
         <section className="joey-section white-bg">
-          <div className="overview-header">
-            <h2 className="overview-title">Overview</h2>
-            <div className="overview-content-layout">
-              <div className="overview-text">
-                <p className="overview-description">
-                  Four months ago, our team was asked to design a solution that 
-                  supports underrepresented trades by helping them to present into 
-                  their industry. Through extensive user research, we kept clear: 
-                  unclear pay are often workplace problems, not individual problems. 
-                  That pushed us toward a different angle; reduce reliance on "the 
-                  middleman," improve transparency, and build a platform directly 
-                  with homeowners, with trust built into the experience.
-                </p>
-                <div className="overview-tags">
-                  <span className="overview-tag">Lead Designer</span>
-                  <span className="overview-tag">8 weeks</span>
-                  <span className="overview-tag">Team Project</span>
-                </div>
+          <div className="overview-content-layout">
+            <div className="overview-text">
+              <h2 className="overview-title">Overview</h2>
+              <p className="overview-description">
+                Four months ago, our team was asked to design a solution that 
+                supports underrepresented trades by helping them to present into 
+                their industry. Through extensive user research, we kept clear: 
+                unclear pay are often workplace problems, not individual problems. 
+                That pushed us toward a different angle; reduce reliance on "the 
+                middleman," improve transparency, and build a platform directly 
+                with homeowners, with trust built into the experience.
+              </p>
+              <div className="overview-tags">
+                <span className="overview-tag">Lead Designer</span>
+                <span className="overview-tag">8 weeks</span>
+                <span className="overview-tag">Team Project</span>
               </div>
-              <div className="overview-visual">
-                <div className="phone-mockup-showcase">
-                  <div className="phone-mockup"></div>
-                  <div className="phone-mockup"></div>
-                </div>
-              </div>
+            </div>
+            <div className="overview-visual">
+              <img 
+                src="/joeydocassets/overviewbig.png" 
+                alt="Joey app screens showing verification process and profile preview"
+                className="overview-image"
+              />
             </div>
           </div>
         </section>
@@ -100,7 +103,11 @@ const Joey = () => {
               </div>
             </div>
             <div className="my-role-image">
-              <div className="role-image-placeholder"></div>
+              <img 
+                src="/joeydocassets/myrolebig.png" 
+                alt="My role in the Joey project"
+                className="role-image"
+              />
             </div>
           </div>
         </section>
@@ -123,7 +130,11 @@ const Joey = () => {
         <section className="joey-section white-bg problem-core-hop">
           {/* Row 1: Image left | What's the problem? right */}
           <div className="problem-row">
-            <div className="problem-image-placeholder"></div>
+            <img 
+              src="/joeydocassets/whatproblembig.png" 
+              alt="Homeowner and tradespeople reviewing documents"
+              className="problem-image"
+            />
             <div className="problem-text">
               <h2 className="problem-title">What's the problem?</h2>
               <h3 className="problem-subtitle">Trust & clarity are missing.</h3>
@@ -153,12 +164,11 @@ const Joey = () => {
               </p>
             </div>
             <div className="hop-to-it-block">
-              <span className="hop-text hop-left">Hop</span>
-              <div className="hop-phones">
-                <div className="hop-phone-placeholder"></div>
-                <div className="hop-phone-placeholder"></div>
-              </div>
-              <span className="hop-text hop-right">To It.</span>
+              <img 
+                src="/joeydocassets/coreinsightbig.png" 
+                alt="Joey app - Hop To It, showing verification and professional browsing screens"
+                className="core-insight-image"
+              />
             </div>
           </div>
         </section>

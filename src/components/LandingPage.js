@@ -160,7 +160,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <section className="landing-page" ref={sectionRef}>
+    <section id="home" className="landing-page" ref={sectionRef}>
       <div className="landing-parallax">
         <div className="landing-hill landing-hill-4" ref={(el) => (hillRefs.current[4] = el)} style={{ opacity: 0 }}>
           <img src="/Landscape%20assets/4.svg" alt="" aria-hidden="true" />
@@ -199,6 +199,18 @@ const LandingPage = () => {
           <div className="landing-logo" ref={(el) => (hillRefs.current.logo = el)}>
             <img src="/Landscape%20assets/logo.svg" alt="Rp logo" ref={logoImgRef} style={{ opacity: 0 }} />
           </div>
+          <button 
+            className="landing-cta" 
+            onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            View My Work
+          </button>
+        </div>
+        <div className="landing-scroll-hint" onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="scroll-mouse">
+            <div className="scroll-wheel"></div>
+          </div>
+          <span className="scroll-text">Scroll down</span>
         </div>
         <div className="landing-cloud-logo-wrap">
           <div className="landing-cloud-logo" ref={(el) => (hillRefs.current.cloudLogo = el)} style={{ opacity: 0 }}>

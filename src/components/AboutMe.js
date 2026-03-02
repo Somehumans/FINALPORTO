@@ -34,7 +34,7 @@ const IconRow = ({ size, reverse }) => (
 );
 
 const AboutMe = () => (
-  <section className="about-me">
+  <section id="about-me" className="about-me">
 
     <IconRow size={112} reverse={false} />
 

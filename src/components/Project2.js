@@ -15,17 +15,6 @@ const Project2 = () => {
 
   return (
     <div className="p2-page">
-      {/* Header */}
-      <header className="p2-header">
-        <span className="p2-logo">DinoCode</span>
-        <nav className="p2-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
       {/* Container 1: Hero – like Joey (whole box: visual + description + tags) */}
       <section className="p2-hero">
         <div className="p2-hero-content">

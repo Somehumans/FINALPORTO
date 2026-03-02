@@ -74,6 +74,7 @@
   left: 0;
   right: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 7;
@@ -88,6 +89,77 @@
   width: 380px;
   height: auto;
   display: block;
+}
+
+.landing-cta {
+  pointer-events: auto;
+  margin-top: 120px;
+  padding: 14px 36px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: #C4956F;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.landing-cta:hover {
+  background: #b0845f;
+  transform: translateY(-2px);
+}
+
+.landing-scroll-hint {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  animation: hintBounce 2s ease-in-out infinite;
+}
+
+.scroll-mouse {
+  width: 28px;
+  height: 46px;
+  border: 2.5px solid rgba(0, 0, 0, 0.6);
+  border-radius: 14px;
+  position: relative;
+}
+
+.scroll-wheel {
+  width: 4px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheelScroll 1.5s ease-in-out infinite;
+}
+
+.scroll-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.5px;
+}
+
+@keyframes wheelScroll {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
 }
 
 .landing-cloud-behind-logo-wrap {

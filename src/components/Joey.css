@@ -16,12 +16,11 @@
   margin: 0 auto;
 }
 
-.joey-hero-image-placeholder {
+.joey-hero-image {
   width: 100%;
-  height: 400px;
-  background-color: #fff8f0;
-  border: 3px solid #ffddcc;
+  height: auto;
   margin-bottom: 40px;
+  border-radius: 8px;
 }
 
 .joey-hero-text {
@@ -92,7 +91,9 @@
 .overview-content-layout {
   display: flex;
   gap: 60px;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .overview-text {
@@ -125,6 +126,13 @@
 
 .overview-visual {
   flex-shrink: 0;
+}
+
+.overview-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
 }
 
 .phone-mockup-showcase {
@@ -205,11 +213,10 @@
   min-width: 400px;
 }
 
-.role-image-placeholder {
+.role-image {
   width: 100%;
-  height: 380px;
-  background-color: #2a3142;
-  border-radius: 45px;
+  height: auto;
+  border-radius: 16px;
 }
 
 /* Project Prompt - rounded card, aligned with problem section (max-width 1200px) */
@@ -269,16 +276,16 @@
 .problem-row {
   display: flex;
   gap: 60px;
-  align-items: flex-start;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto 60px;
 }
 
-.problem-image-placeholder {
+.problem-image {
   width: 100%;
   max-width: 480px;
-  height: 280px;
-  background-color: #ddd;
+  height: auto;
+  border-radius: 16px;
   flex-shrink: 0;
 }
 
@@ -312,7 +319,7 @@
 .core-hop-row {
   display: flex;
   gap: 60px;
-  align-items: stretch;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -332,17 +339,10 @@
 
 /* Hop To It - orange block (Ref Frame 412) */
 .hop-to-it-block {
-  flex: 1;
-  min-width: 400px;
-  background-color: #FA7D25;
-  border-radius: 45px;
-  padding: 50px 40px;
-  position: relative;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  min-height: 380px;
 }
 
 .hop-text {
@@ -363,19 +363,10 @@
   right: 40px;
 }
 
-.hop-phones {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  z-index: 1;
-}
-
-.hop-phone-placeholder {
-  width: 160px;
-  height: 320px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 24px;
-  border: 6px solid rgba(0, 0, 0, 0.3);
+.core-insight-image {
+  width: 100%;
+  max-width: 434px;
+  height: auto;
 }
 
 /* Lets ask the people card (Ref Frame 362) */
@@ -1075,7 +1066,7 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 24px 48px;
+  padding-bottom: 48px;
   background-color: #FDF5ED;
 }
 
@@ -1536,8 +1527,8 @@
     padding: 60px 20px 40px;
   }
 
-  .joey-hero-image-placeholder {
-    height: 250px;
+  .joey-hero-image {
+    width: 100%;
   }
 
   .joey-description {
@@ -1588,7 +1579,7 @@
     flex-direction: column;
   }
 
-  .problem-image-placeholder {
+  .problem-image {
     max-width: 100%;
   }
 
