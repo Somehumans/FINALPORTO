@@ -379,7 +379,6 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
-  border: 3px solid #111524;
   border-radius: 44px;
   padding: 50px 60px 60px;
   position: relative;
@@ -387,6 +386,9 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 40px;
+  overflow: hidden;
+  outline: 4px solid #111524;
+  outline-offset: -4px;
 }
 
 .ask-people-content {
@@ -409,7 +411,8 @@
 }
 
 .ask-people-list {
-  list-style: none;
+  list-style: disc;
+  list-style-position: inside;
   padding: 0;
   margin: 0;
 }
@@ -422,16 +425,27 @@
 }
 
 .ask-people-list-title {
+  list-style: none;
   margin-bottom: 12px;
 }
 
-.ask-people-fox-placeholder {
-  width: 120px;
+.ask-people-kangaroo {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 200px;
   height: 140px;
-  background-color: #F56B09;
-  border-radius: 20px 20px 0 0;
-  flex-shrink: 0;
-  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.ask-people-kangaroo-img {
+  width: auto;
+  height: 100%;
+  max-width: 220px;
+  object-fit: contain;
+  object-position: bottom right;
 }
 
 /* What my search revealed */
@@ -1602,7 +1616,7 @@
     padding: 40px 24px;
   }
 
-  .ask-people-fox-placeholder {
+  .ask-people-kangaroo {
     align-self: flex-end;
     margin-top: 20px;
   }

@@ -19,17 +19,11 @@ const Project2 = () => {
       <section className="p2-hero">
         <div className="p2-hero-content">
           <div className="p2-hero-visual">
-            <div className="p2-hero-visual-inner">
-              <div className="p2-hero-logo-wrap">
-                <div className="p2-dino-icon" aria-hidden="true" />
-                <span className="p2-hero-logo-divider" aria-hidden="true" />
-                <span className="p2-logo-text">DinoCode</span>
-              </div>
-              <div className="p2-hero-phones-wrap">
-                <div className="p2-hero-phone p2-hero-phone--back" aria-hidden="true" />
-                <div className="p2-hero-phone p2-hero-phone--front" aria-hidden="true" />
-              </div>
-            </div>
+            <img 
+              src="/dinocodeassets/hero.png" 
+              alt="DinoCode app - Logo and mobile app screens showing lessons, challenges, and progress"
+              className="p2-hero-image"
+            />
           </div>
           <div className="p2-hero-text">
             <p className="p2-hero-description">
@@ -65,9 +59,12 @@ const Project2 = () => {
                 <span className="p2-overview-tag">Team Project</span>
               </div>
             </div>
-            <div className="p2-green-box p2-phones-box">
-              <div className="p2-graphic-placeholder p2-phone-mockup" title="HTML course screen (add graphic from Ref)" aria-hidden="true" />
-              <div className="p2-graphic-placeholder p2-phone-mockup" title="CSS course screen (add graphic from Ref)" aria-hidden="true" />
+            <div className="p2-overview-visual">
+              <img 
+                src="/dinocodeassets/overview.png" 
+                alt="DinoCode HTML and CSS course screens on mobile"
+                className="p2-overview-image"
+              />
             </div>
           </div>
         </section>

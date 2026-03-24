@@ -187,7 +187,9 @@ const Joey = () => {
                 <li>8 tradesworkers (worker survey)</li>
               </ul>
             </div>
-            <div className="ask-people-fox-placeholder"></div>
+            <div className="ask-people-kangaroo">
+              <img src="/joeydocassets/kangaroo.svg" alt="" className="ask-people-kangaroo-img" />
+            </div>
           </div>
         </section>
 
