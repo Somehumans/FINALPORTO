@@ -8,26 +8,26 @@
 .skills-ticker-wrap {
   width: 100%;
   overflow: hidden;
-  padding: 28px 0;
+  padding: 18px 0;
   background-color: #fff;
 }
 
 .skills-ticker {
   display: flex;
   width: max-content;
-  animation: ticker-left 28s linear infinite;
+  animation: ticker-left linear infinite;
 }
 
 .skills-ticker--reverse {
-  animation: ticker-right 32s linear infinite;
+  animation: ticker-right linear infinite;
 }
 
 .ticker-icon {
   flex-shrink: 0;
-  border-radius: 14px;
+  border-radius: 12px;
   display: block;
   user-select: none;
-  margin-right: 24px; /* trailing gap included so -50% lands exactly on seam */
+  margin-right: 18px;
 }
 
 @keyframes ticker-left {
@@ -44,10 +44,10 @@
 .about-content {
   display: flex;
   align-items: center;
-  gap: 80px;
-  max-width: 1100px;
+  gap: clamp(2rem, 6vw, 5rem);
+  max-width: 68.75rem;
   margin: 0 auto;
-  padding: 64px 48px;
+  padding: clamp(3rem, 6vw, 4rem) var(--page-gutter, clamp(1.5rem, 4vw, 3rem));
 }
 
 /* ── Text column ── */
@@ -57,7 +57,7 @@
 }
 
 .about-heading {
-  font-size: 52px;
+  font-size: clamp(2rem, 6vw, 3.25rem);
   font-weight: 800;
   color: #111;
   margin: 0 0 28px;
@@ -84,11 +84,11 @@
 
 .skill-tag {
   padding: 7px 16px;
-  background-color: #C6F135;
+  background-color: #d4ecd4;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #2d4a2d;
 }
 
 /* ── Photo column ── */

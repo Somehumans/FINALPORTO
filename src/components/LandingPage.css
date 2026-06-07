@@ -70,7 +70,7 @@
 
 .landing-logo-wrap {
   position: absolute;
-  top: 12%;
+  top: clamp(10%, 14vh, 16%);
   left: 0;
   right: 0;
   display: flex;
@@ -79,6 +79,7 @@
   align-items: center;
   z-index: 7;
   pointer-events: none;
+  padding: 0 var(--page-gutter, clamp(1rem, 4vw, 2rem));
 }
 
 .landing-logo {
@@ -86,29 +87,35 @@
 }
 
 .landing-logo img {
-  width: 380px;
+  width: min(320px, 62vw);
   height: auto;
   display: block;
 }
 
-.landing-cta {
+.landing-intro {
   pointer-events: auto;
-  margin-top: 120px;
-  padding: 14px 36px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background: #C4956F;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  margin-top: clamp(1rem, 2.5vh, 1.75rem);
+  text-align: center;
+  max-width: min(40rem, 92vw);
 }
 
-.landing-cta:hover {
-  background: #b0845f;
-  transform: translateY(-2px);
+.landing-greeting {
+  font-family: var(--font-greeting);
+  font-size: clamp(1.65rem, 4.5vw, 2.5rem);
+  font-weight: 400;
+  color: #3a2f28;
+  margin: 0 0 0.65rem;
+  line-height: 1.15;
+}
+
+.landing-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #6b6560;
+  line-height: 1.65;
+  margin: 0;
 }
 
 .landing-scroll-hint {
@@ -121,7 +128,6 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
   animation: hintBounce 2s ease-in-out infinite;
 }
 
@@ -175,7 +181,7 @@
 }
 
 .landing-cloud-behind-logo img {
-  width: 340px;
+  width: min(340px, 55vw);
   height: auto;
   display: block;
 }
@@ -197,7 +203,7 @@
 }
 
 .landing-cloud-top img {
-  width: 380px;
+  width: min(380px, 45vw);
   height: auto;
   display: block;
 }
@@ -205,7 +211,7 @@
 .landing-cloud-logo-wrap {
   position: absolute;
   top: 20%;
-  left: calc(50% - 520px);
+  left: max(0px, calc(50% - 520px));
   z-index: 9;
   pointer-events: none;
 }
@@ -215,7 +221,7 @@
 }
 
 .landing-cloud-logo img {
-  width: 360px;
+  width: min(360px, 50vw);
   height: auto;
   display: block;
 }
@@ -227,6 +233,48 @@
   object-fit: cover;
   object-position: bottom center;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .landing-logo-wrap {
+    top: clamp(8%, 12vh, 14%);
+  }
+
+  .landing-greeting {
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+  }
+
+  .landing-cloud-behind-logo-wrap {
+    top: 30%;
+    left: calc(50% + 20px);
+  }
+
+  .landing-cloud-logo-wrap {
+    display: none;
+  }
+
+  .landing-cloud-top-left {
+    left: -12%;
+  }
+
+  .landing-cloud-top-right {
+    right: -12%;
+  }
+
+  .landing-scroll-hint {
+    bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-cloud-behind-logo-wrap {
+    display: none;
+  }
 }
 
 

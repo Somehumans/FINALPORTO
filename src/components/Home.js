@@ -1,6 +1,7 @@
 import React from 'react';
 import LandingPage from './LandingPage';
 import MyProjects from './MyProjects';
+import Artwork from './Artwork';
 import AboutMe from './AboutMe';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <LandingPage />
       <MyProjects />
       <AboutMe />
+      <Artwork />
     </>
   );
 };

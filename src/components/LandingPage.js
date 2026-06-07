@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { getLogoMorphProgress, getHeroLogoOpacity } from '../utils/logoMorph';
 import './LandingPage.css';
 
 const PARALLAX_STRENGTH = 12;
@@ -37,6 +38,7 @@ const LandingPage = () => {
   const sectionRef  = useRef(null);
   const hillRefs    = useRef({});
   const logoImgRef  = useRef(null);
+  const introRef    = useRef(null);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -99,6 +101,15 @@ const LandingPage = () => {
       FADE_KEYS.forEach((key) => {
         if (opacityQTs[key]) opacityQTs[key](opacity);
       });
+      const morphP = getLogoMorphProgress(window.scrollY);
+      const heroOpacity = getHeroLogoOpacity(morphP);
+      if (logoImgRef.current) {
+        logoImgRef.current.style.opacity = String(heroOpacity);
+      }
+      if (r.logo) {
+        r.logo.style.visibility = heroOpacity > 0 ? 'visible' : 'hidden';
+        r.logo.style.pointerEvents = heroOpacity > 0 ? 'auto' : 'none';
+      }
     };
 
     // — Looping drift animations (on inner wrappers, no conflict) —
@@ -138,12 +149,19 @@ const LandingPage = () => {
       { scale: 0, opacity: 0 },
       { scale: 1, opacity: 1, duration: 0.7, ease: 'back.out(1.8)', delay: 1.0 }
     );
+    if (introRef.current) {
+      gsap.fromTo(introRef.current,
+        { y: 16, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out', delay: 1.15 }
+      );
+    }
 
     // Add interaction listeners after entrance finishes (~2s)
     let listenersAdded = false;
     const timer = setTimeout(() => {
       section.addEventListener('mousemove', onMouseMove);
       window.addEventListener('scroll', onScroll);
+      onScroll();
       listenersAdded = true;
     }, 2000);
 
@@ -199,12 +217,12 @@ const LandingPage = () => {
           <div className="landing-logo" ref={(el) => (hillRefs.current.logo = el)}>
             <img src="/Landscape%20assets/logo.svg" alt="Rp logo" ref={logoImgRef} style={{ opacity: 0 }} />
           </div>
-          <button 
-            className="landing-cta" 
-            onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            View My Work
-          </button>
+          <div className="landing-intro" ref={introRef} style={{ opacity: 0 }}>
+            <p className="landing-greeting">Hello! I&apos;m Rehan,</p>
+            <p className="landing-tagline">
+              UX, marketing, &amp; brand with a little magic in every leap.
+            </p>
+          </div>
         </div>
         <div className="landing-scroll-hint" onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}>
           <div className="scroll-mouse">

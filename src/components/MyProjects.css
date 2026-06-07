@@ -1,12 +1,12 @@
 .my-projects {
   width: 100%;
-  padding: 80px 40px;
+  padding: clamp(3rem, 8vw, 5rem) var(--page-gutter, clamp(1.25rem, 4vw, 2.5rem));
   background-color: #f5f5f5;
   text-align: center;
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: 10px;
   color: #333;
 }
@@ -23,10 +23,26 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1.25rem, 3vw, 1.875rem);
+  max-width: var(--content-max, 1200px);
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-subtitle {
+    margin-bottom: 36px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-card-link {
@@ -36,21 +52,18 @@
 
 .project-card {
   background-color: #fff;
+  border: 4px solid transparent;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
+.project-card:hover,
 .project-card-link:hover .project-card {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #ff8c42;
 }
 
 .project-image-placeholder {
@@ -67,14 +80,22 @@
   border-radius: 15px;
   margin-bottom: 20px;
   display: block;
-  outline: 4px solid #136200;
-  outline-offset: -4px;
 }
 
 .project-title {
+  font-family: var(--font-display);
   font-size: 24px;
   margin-bottom: 10px;
   color: #333;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.project-card-link:hover .project-title,
+.project-card:hover .project-title {
+  color: #ff8c42;
+  text-decoration: underline;
+  text-decoration-color: #ff8c42;
+  text-underline-offset: 4px;
 }
 
 .project-description {

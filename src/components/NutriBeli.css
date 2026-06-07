@@ -1,0 +1,402 @@
+/* NutriBeli case study – Joey layout + NutriBeli brand overrides (mirrors Project2.css) */
+
+.nb-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  padding-top: var(--nav-height, 4.5rem);
+  --nb-gutter: clamp(1.5rem, 5vw, 4.375rem);
+  --nb-band: 75rem;
+  --nb-bg: #fff;
+  --nb-accent: #386641;
+  --nb-accent-dark: #1e4d0f;
+  --nb-accent-mid: #49713a;
+  --nb-hero: #fef9c3;
+  --nb-tag-hover: #c8e6d4;
+}
+
+/* Hero + document – same band / gutter system as DinoCode */
+.nb-page .joey-hero-main {
+  background-color: var(--nb-bg);
+  padding-left: var(--nb-gutter);
+  padding-right: var(--nb-gutter);
+}
+
+.nb-page .joey-hero-content {
+  max-width: var(--nb-band);
+  margin: 0 auto;
+}
+
+.nb-page .joey-hero-card {
+  background-color: var(--nb-hero);
+  border-radius: var(--radius-md);
+}
+
+.nb-page .joey-tag {
+  color: var(--nb-accent-dark);
+  background-color: #f0f0f0;
+}
+
+.nb-page .joey-tag:hover {
+  background-color: var(--nb-tag-hover);
+}
+
+.nb-page .case-study-document {
+  background-color: var(--nb-bg);
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin-top: 0;
+  overflow: visible;
+  padding-left: var(--nb-gutter);
+  padding-right: var(--nb-gutter);
+}
+
+/* All in-document sections share one band width */
+.nb-page .overview-content-layout,
+.nb-page .section-content-split,
+.nb-page .problem-row,
+.nb-page .core-hop-row,
+.nb-page .outcome-two-col,
+.nb-page .project-prompt-banner,
+.nb-page .my-role-section,
+.nb-page .what-search-section,
+.nb-page .outcome-section,
+.nb-page .nb-slide-section,
+.nb-page .nb-case-nav {
+  max-width: var(--nb-band);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nb-page .joey-section.white-bg {
+  padding: 0;
+}
+
+.nb-page .my-role-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Two-column rows – space-between like DinoCode */
+.nb-page .overview-content-layout,
+.nb-page .section-content-split,
+.nb-page .problem-row,
+.nb-page .core-hop-row,
+.nb-page .outcome-two-col {
+  justify-content: space-between;
+}
+
+.nb-page .overview-content-layout,
+.nb-page .problem-row,
+.nb-page .core-hop-row {
+  flex-wrap: wrap;
+}
+
+@media (min-width: 901px) {
+  .nb-page .overview-content-layout,
+  .nb-page .problem-row,
+  .nb-page .core-hop-row {
+    flex-wrap: nowrap;
+  }
+}
+
+.nb-page .overview-text,
+.nb-page .my-role-text,
+.nb-page .outcome-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.nb-page .my-role-image {
+  flex-shrink: 0;
+}
+
+.nb-page .problem-row,
+.nb-page .core-hop-row {
+  align-items: center;
+  gap: var(--section-gap, clamp(1.5rem, 4vw, 3.75rem));
+}
+
+@media (min-width: 901px) {
+  .nb-page .problem-row,
+  .nb-page .core-hop-row {
+    flex-wrap: nowrap;
+  }
+
+  .nb-page .overview-text,
+  .nb-page .problem-text,
+  .nb-page .core-insight-block {
+    flex: 1 1 0;
+    max-width: 55%;
+  }
+
+  .nb-page .overview-visual,
+  .nb-page .problem-row > .case-study-media {
+    flex: 0 1 min(480px, 42%);
+    max-width: min(480px, 42%);
+  }
+}
+
+@media (min-width: 1025px) {
+  .nb-page .problem-row > .case-study-media {
+    flex: 0 1 min(480px, 42%);
+    max-width: min(480px, 42%);
+    min-width: 0;
+  }
+}
+
+.nb-page .problem-text,
+.nb-page .core-insight-block {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+/* Text-only intro rows (band / app headings) – full band, no empty column */
+.nb-page .problem-row.nb-text-row {
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.nb-page .problem-row.nb-text-row .problem-text {
+  max-width: 100%;
+  flex: 1 1 100%;
+}
+
+.nb-page .problem-core-hop {
+  padding-top: 40px;
+}
+
+.nb-page .problem-core-hop + .nb-slide-section {
+  margin-top: 0;
+}
+
+/* Full-width presentation slides – same pattern as DinoCode SVG sections */
+.nb-slide-section {
+  margin-top: clamp(2rem, 4vw, 3.75rem);
+  margin-bottom: clamp(2rem, 4vw, 3.75rem);
+}
+
+.nb-slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.nb-page .my-role-section {
+  overflow: hidden;
+}
+
+.nb-page .my-role-image {
+  flex: 1 1 280px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nb-page .my-role-text {
+  min-width: 0;
+  flex: 1 1 280px;
+}
+
+.nb-page .outcome-two-col {
+  align-items: stretch;
+  min-height: 0;
+}
+
+.nb-page .outcome-left {
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+  max-width: 50%;
+}
+
+.nb-page .outcome-right {
+  flex: 0 0 auto;
+  max-width: min(560px, 50%);
+  justify-content: flex-end;
+  align-items: center;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  min-width: 0;
+  display: flex;
+  overflow: visible;
+}
+
+.nb-page .outcome-section {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 60px;
+}
+
+.nb-page .what-search-section {
+  margin-top: 60px;
+}
+
+.nb-outcome-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* Brand colour overrides */
+.nb-page .overview-title {
+  color: var(--nb-accent-dark);
+}
+
+.nb-page .overview-tag {
+  background-color: #e8f2ec;
+  border: none;
+  color: var(--nb-accent-dark);
+}
+
+.nb-page .project-prompt-banner.nb-prompt-banner {
+  background-color: var(--nb-accent);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.nb-page .banner-tag {
+  background-color: #a8d5b5;
+}
+
+.nb-page .banner-tag-dot {
+  background-color: #739757;
+}
+
+.nb-page .problem-title {
+  color: var(--nb-accent-dark);
+}
+
+.nb-page .problem-subtitle {
+  color: var(--nb-accent-mid);
+  font-style: italic;
+}
+
+.nb-page .what-search-title,
+.nb-page .outcome-title {
+  color: var(--nb-accent-dark);
+}
+
+.nb-page .what-search-list li::before {
+  color: var(--nb-accent);
+}
+
+.nb-page .outcome-watch-btn.nb-devpost-btn {
+  background-color: var(--nb-accent);
+}
+
+.nb-page .outcome-watch-btn.nb-devpost-btn:hover {
+  background-color: var(--nb-accent-dark);
+}
+
+/* Case study nav */
+.nb-case-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #c8e6d4;
+}
+
+.nb-nav-link {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--nb-accent);
+  background: #fff;
+  border: 2px solid var(--nb-accent);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.nb-nav-link:hover {
+  background: #f5faf7;
+}
+
+.nb-nav-link-next {
+  background: var(--nb-accent);
+  color: #fff;
+}
+
+.nb-nav-link-next:hover {
+  background: var(--nb-accent-dark);
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .nb-page .overview-content-layout,
+  .nb-page .section-content-split,
+  .nb-page .problem-row,
+  .nb-page .outcome-two-col {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nb-page .my-role-image {
+    width: 100%;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .nb-page .role-image {
+    width: 100%;
+  }
+
+  .nb-page .outcome-left,
+  .nb-page .outcome-right {
+    max-width: 100%;
+  }
+
+  .nb-page .outcome-left {
+    padding-right: 0;
+  }
+
+  .nb-page .overview-visual {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nb-page .problem-text,
+  .nb-page .core-insight-block {
+    width: 100%;
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+
+  .problem-row > .case-study-media {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nb-page .case-study-document {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+  }
+
+  .nb-case-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nb-nav-link {
+    text-align: center;
+  }
+
+  .nb-page .my-role-section,
+  .nb-page .project-prompt-banner {
+    margin-top: clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+}

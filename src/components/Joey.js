@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Joey.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Joey.css";
 
 const Joey = () => {
   const tags = [
-    'Marketing',
-    'Design',
-    'Development',
-    'Animation',
-    'Character Design',
-    'SEO/SEM',
-    'Video Editing'
+    "Marketing",
+    "Design",
+    "Development",
+    "Animation",
+    "Character Design",
+    "SEO/SEM",
+    "Video Editing",
   ];
 
   return (
@@ -18,21 +18,26 @@ const Joey = () => {
       {/* Hero Section - Outside Document */}
       <section className="joey-hero-main">
         <div className="joey-hero-content">
-          <img 
-            src="/joeydocassets/hero.svg" 
-            alt="Joey app - Hop to it. Two mobile phone mockups showing the Joey app interface"
-            className="joey-hero-image"
-          />
+          <div className="joey-hero-card">
+            <img
+              src="/joeydocassets/hero.svg"
+              alt="Joey app - Hop to it. Two mobile phone mockups showing the Joey app interface"
+              className="joey-hero-image"
+            />
+          </div>
           <div className="joey-hero-text">
             <p className="joey-description">
-              Joey is an AI-powered platform that connects homeowners with skilled tradespeople 
-              through clear profiles, trustworthy portfolios, and simpler job posting. The goal 
-              is to remove friction, reduce uncertainty, and create a more direct, transparent 
-              way for people to hire and get hired.
+              Joey is an AI-powered platform that connects homeowners with
+              skilled tradespeople through clear profiles, trustworthy
+              portfolios, and simpler job posting. The goal is to remove
+              friction, reduce uncertainty, and create a more direct,
+              transparent way for people to hire and get hired.
             </p>
             <div className="joey-tags">
               {tags.map((tag, index) => (
-                <span key={index} className="joey-tag">{tag}</span>
+                <span key={index} className="joey-tag">
+                  {tag}
+                </span>
               ))}
             </div>
           </div>
@@ -41,20 +46,20 @@ const Joey = () => {
 
       {/* Case Study Document Container */}
       <div className="case-study-document">
-        
         {/* Overview Section */}
         <section className="joey-section white-bg">
           <div className="overview-content-layout">
             <div className="overview-text">
               <h2 className="overview-title">Overview</h2>
               <p className="overview-description">
-                Four months ago, our team was asked to design a solution that 
-                supports underrepresented trades by helping them to present into 
-                their industry. Through extensive user research, we kept clear: 
-                unclear pay are often workplace problems, not individual problems. 
-                That pushed us toward a different angle; reduce reliance on "the 
-                middleman," improve transparency, and build a platform directly 
-                with homeowners, with trust built into the experience.
+                Four months ago, our team was asked to design a solution that
+                supports underrepresented trades by helping them to present into
+                their industry. Through extensive user research, we kept clear:
+                unclear pay are often workplace problems, not individual
+                problems. That pushed us toward a different angle; reduce
+                reliance on "the middleman," improve transparency, and build a
+                platform directly with homeowners, with trust built into the
+                experience.
               </p>
               <div className="overview-tags">
                 <span className="overview-tag">Lead Designer</span>
@@ -63,8 +68,8 @@ const Joey = () => {
               </div>
             </div>
             <div className="overview-visual">
-              <img 
-                src="/joeydocassets/overviewbig.png" 
+              <img
+                src="/joeydocassets/overviewbig.png"
                 alt="Joey app screens showing verification process and profile preview"
                 className="overview-image"
               />
@@ -77,7 +82,7 @@ const Joey = () => {
           <div className="section-content-split">
             <div className="my-role-text">
               <h2 className="section-title-white">My role</h2>
-              
+
               <div className="role-category">
                 <h3 className="role-subtitle">Led design & branding</h3>
                 <ul className="role-list">
@@ -98,13 +103,16 @@ const Joey = () => {
                 <h3 className="role-subtitle">Iterated & shipped assets</h3>
                 <ul className="role-list">
                   <li>Produced marketing assets</li>
-                  <li>Iterated key screens using research insights and critique feedback</li>
+                  <li>
+                    Iterated key screens using research insights and critique
+                    feedback
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="my-role-image">
-              <img 
-                src="/joeydocassets/myrolebig.png" 
+              <img
+                src="/joeydocassets/myrolebig.png"
                 alt="My role in the Joey project"
                 className="role-image"
               />
@@ -116,8 +124,9 @@ const Joey = () => {
         <section className="project-prompt-banner">
           <div className="banner-content">
             <p className="banner-text">
-              Design and develop a web/mobile digital solution for underrepresented 
-              people in trades that leverages Artificial Intelligence.
+              Design and develop a web/mobile digital solution for
+              underrepresented people in trades that leverages Artificial
+              Intelligence.
             </p>
             <span className="banner-tag">
               <span className="banner-tag-dot"></span>
@@ -130,23 +139,27 @@ const Joey = () => {
         <section className="joey-section white-bg problem-core-hop">
           {/* Row 1: Image left | What's the problem? right */}
           <div className="problem-row">
-            <img 
-              src="/joeydocassets/whatproblembig.png" 
-              alt="Homeowner and tradespeople reviewing documents"
-              className="problem-image"
-            />
+            <div className="case-study-media">
+              <img
+                src="/joeydocassets/whatproblembig.png"
+                alt="Homeowner and tradespeople reviewing documents"
+                className="problem-image"
+              />
+            </div>
             <div className="problem-text">
               <h2 className="problem-title">What's the problem?</h2>
               <h3 className="problem-subtitle">Trust & clarity are missing.</h3>
               <p className="problem-description">
-                The trades hiring experience breaks down on trust and clarity. For homeowners, 
-                hiring often feels like guessing: Do I have the right trade? Is the quote fair? 
-                Who is coming into my home? Will the final price
+                The trades hiring experience breaks down on trust and clarity.
+                For homeowners, hiring often feels like guessing: Do I have the
+                right trade? Is the quote fair? Who is coming into my home? Will
+                the final price
               </p>
               <p className="problem-description">
-                For tradesworkers, the "workplace pipeline" can be a bottleneck: inconsistent 
-                job access, limited control over schedules, wage pressure, and higher exposure 
-                to discrimination or harassment on job sites.
+                For tradesworkers, the "workplace pipeline" can be a bottleneck:
+                inconsistent job access, limited control over schedules, wage
+                pressure, and higher exposure to discrimination or harassment on
+                job sites.
               </p>
             </div>
           </div>
@@ -155,17 +168,21 @@ const Joey = () => {
           <div className="core-hop-row">
             <div className="core-insight-block">
               <h2 className="problem-title">The core insight</h2>
-              <h3 className="problem-subtitle">Remove the workplace gatekeeper</h3>
+              <h3 className="problem-subtitle">
+                Remove the workplace gatekeeper
+              </h3>
               <p className="problem-description">
-                If the workplace is what drives these issues, then designing around the workplace 
-                only reinforces the problem. Skilled tradesworkers need a way to present themselves 
-                as independent professionals, and homeowners need clarity they can trust. Joey becomes 
-                the layer that enables direct connection, without the workplace acting as the gatekeeper.
+                If the workplace is what drives these issues, then designing
+                around the workplace only reinforces the problem. Skilled
+                tradesworkers need a way to present themselves as independent
+                professionals, and homeowners need clarity they can trust. Joey
+                becomes the layer that enables direct connection, without the
+                workplace acting as the gatekeeper.
               </p>
             </div>
             <div className="hop-to-it-block">
-              <img 
-                src="/joeydocassets/coreinsightbig.png" 
+              <img
+                src="/joeydocassets/coreinsightbig.png"
                 alt="Joey app - Hop To It, showing verification and professional browsing screens"
                 className="core-insight-image"
               />
@@ -177,18 +194,27 @@ const Joey = () => {
         <section className="ask-people-card">
           <div className="ask-people-inner">
             <div className="ask-people-content">
-              <h2 className="ask-people-title">Lets ask the people for some help</h2>
+              <h2 className="ask-people-title">
+                Lets ask the people for some help
+              </h2>
               <p className="ask-people-desc">
-                I combined user surveys and secondary research to turn vague "trust issues" into design requirements.
+                I combined user surveys and secondary research to turn vague
+                "trust issues" into design requirements.
               </p>
               <ul className="ask-people-list">
-                <li className="ask-people-list-title"><strong>Who we learned from</strong></li>
+                <li className="ask-people-list-title">
+                  <strong>Who we learned from</strong>
+                </li>
                 <li>30 homeowners (client survey)</li>
                 <li>8 tradesworkers (worker survey)</li>
               </ul>
             </div>
             <div className="ask-people-kangaroo">
-              <img src="/joeydocassets/kangaroo.svg" alt="" className="ask-people-kangaroo-img" />
+              <img
+                src="/joeydocassets/kangaroo.svg"
+                alt=""
+                className="ask-people-kangaroo-img"
+              />
             </div>
           </div>
         </section>
@@ -197,10 +223,23 @@ const Joey = () => {
         <section className="what-search-section">
           <h2 className="what-search-title">What my search revealed</h2>
           <ul className="what-search-list">
-            <li>Most homeowners rated reviews/photos of work as important or higher.</li>
-            <li>Direct hiring creates trust and risk questions. Homeowners worry about scams, incomplete jobs, and permit responsibility, so proof and clarity need to be built in.</li>
-            <li>Workers can feel pressure to accept unsafe or low-paying work, especially when status or job security is uncertain. Transparent scope, terms, and pricing matters.</li>
-            <li>58% of Immigrant tradesworkers already rely on online job search.</li>
+            <li>
+              Most homeowners rated reviews/photos of work as important or
+              higher.
+            </li>
+            <li>
+              Direct hiring creates trust and risk questions. Homeowners worry
+              about scams, incomplete jobs, and permit responsibility, so proof
+              and clarity need to be built in.
+            </li>
+            <li>
+              Workers can feel pressure to accept unsafe or low-paying work,
+              especially when status or job security is uncertain. Transparent
+              scope, terms, and pricing matters.
+            </li>
+            <li>
+              58% of Immigrant tradesworkers already rely on online job search.
+            </li>
           </ul>
         </section>
 
@@ -208,103 +247,181 @@ const Joey = () => {
         <section className="research-graph-section">
           <div className="research-graph-row">
             <div className="research-graph-panel">
-              <h3 className="research-graph-panel-title">Homeowner trust signals</h3>
-              <p className="research-graph-panel-subtitle">What homeowners look for when hiring (%)</p>
+              <h3 className="research-graph-panel-title">
+                Homeowner trust signals
+              </h3>
+              <p className="research-graph-panel-subtitle">
+                What homeowners look for when hiring (%)
+              </p>
               <div className="research-graph-bars">
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Photos of past work</span>
+                    <span className="research-bar-label">
+                      Photos of past work
+                    </span>
                     <span className="research-bar-count">12/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-100" style={{ width: '100%' }}><span>100%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-100"
+                      style={{ width: "100%" }}
+                    >
+                      <span>100%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Reviews &amp; ratings</span>
+                    <span className="research-bar-label">
+                      Reviews &amp; ratings
+                    </span>
                     <span className="research-bar-count">11/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-92" style={{ width: '92%' }}><span>92%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-92"
+                      style={{ width: "92%" }}
+                    >
+                      <span>92%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Verification badge</span>
+                    <span className="research-bar-label">
+                      Verification badge
+                    </span>
                     <span className="research-bar-count">10/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-83" style={{ width: '83%' }}><span>83%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-83"
+                      style={{ width: "83%" }}
+                    >
+                      <span>83%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Clear pricing / scope</span>
+                    <span className="research-bar-label">
+                      Clear pricing / scope
+                    </span>
                     <span className="research-bar-count">9/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-75" style={{ width: '75%' }}><span>75%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-75"
+                      style={{ width: "75%" }}
+                    >
+                      <span>75%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Portfolio or profile completeness</span>
+                    <span className="research-bar-label">
+                      Portfolio or profile completeness
+                    </span>
                     <span className="research-bar-count">8/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-67" style={{ width: '67%' }}><span>67%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-67"
+                      style={{ width: "67%" }}
+                    >
+                      <span>67%</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="research-graph-panel">
-              <h3 className="research-graph-panel-title">Tradesworker priorities</h3>
-              <p className="research-graph-panel-subtitle">What workers want from the platform (%)</p>
+              <h3 className="research-graph-panel-title">
+                Tradesworker priorities
+              </h3>
+              <p className="research-graph-panel-subtitle">
+                What workers want from the platform (%)
+              </p>
               <div className="research-graph-bars">
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Fair pay &amp; clear terms</span>
+                    <span className="research-bar-label">
+                      Fair pay &amp; clear terms
+                    </span>
                     <span className="research-bar-count">12/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-100" style={{ width: '100%' }}><span>100%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-100"
+                      style={{ width: "100%" }}
+                    >
+                      <span>100%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Direct contact with homeowner</span>
+                    <span className="research-bar-label">
+                      Direct contact with homeowner
+                    </span>
                     <span className="research-bar-count">11/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-92" style={{ width: '92%' }}><span>92%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-92"
+                      style={{ width: "92%" }}
+                    >
+                      <span>92%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Portfolio visibility</span>
+                    <span className="research-bar-label">
+                      Portfolio visibility
+                    </span>
                     <span className="research-bar-count">10/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-83" style={{ width: '83%' }}><span>83%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-83"
+                      style={{ width: "83%" }}
+                    >
+                      <span>83%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Safe / protected payment</span>
+                    <span className="research-bar-label">
+                      Safe / protected payment
+                    </span>
                     <span className="research-bar-count">9/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-75" style={{ width: '75%' }}><span>75%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-75"
+                      style={{ width: "75%" }}
+                    >
+                      <span>75%</span>
+                    </div>
                   </div>
                 </div>
                 <div className="research-bar-item">
                   <div className="research-bar-top">
-                    <span className="research-bar-label">Clear job scope before accepting</span>
+                    <span className="research-bar-label">
+                      Clear job scope before accepting
+                    </span>
                     <span className="research-bar-count">8/12</span>
                   </div>
                   <div className="research-bar-track">
-                    <div className="research-bar-fill research-bar-fill--orange-67 research-bar-fill--dark-text" style={{ width: '67%' }}><span>67%</span></div>
+                    <div
+                      className="research-bar-fill research-bar-fill--orange-67 research-bar-fill--dark-text"
+                      style={{ width: "67%" }}
+                    >
+                      <span>67%</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -314,7 +431,9 @@ const Joey = () => {
 
         {/* Key takeaways from my research (Ref Frame 413) */}
         <section className="key-takeaways-section">
-          <h2 className="key-takeaways-title">Key takeaways from my research</h2>
+          <h2 className="key-takeaways-title">
+            Key takeaways from my research
+          </h2>
           <div className="key-takeaways-card">
             <div className="takeaway-item">
               <div className="takeaway-icon" aria-hidden="true">
@@ -322,7 +441,9 @@ const Joey = () => {
               </div>
               <h3 className="takeaway-heading">Trust is visual</h3>
               <p className="takeaway-line1">People trust what they can see.</p>
-              <p className="takeaway-line2">Photos, past work, and clear profiles reduce hesitation</p>
+              <p className="takeaway-line2">
+                Photos, past work, and clear profiles reduce hesitation
+              </p>
             </div>
             <div className="takeaway-item">
               <div className="takeaway-icon" aria-hidden="true">
@@ -330,196 +451,316 @@ const Joey = () => {
               </div>
               <h3 className="takeaway-heading">Clarity reduces conflict</h3>
               <p className="takeaway-line1">The biggest risk is ambiguity.</p>
-              <p className="takeaway-line2">Jobs need enough detail that both sides agree on expectations.</p>
+              <p className="takeaway-line2">
+                Jobs need enough detail that both sides agree on expectations.
+              </p>
             </div>
             <div className="takeaway-item">
               <div className="takeaway-icon" aria-hidden="true">
                 <span className="takeaway-icon-symbol">🛡</span>
               </div>
               <h3 className="takeaway-heading">Safety builds trust</h3>
-              <p className="takeaway-line1">Direct-to-consumer work only works with safeguards.</p>
-              <p className="takeaway-line2">Verification, offers, and payment protection</p>
+              <p className="takeaway-line1">
+                Direct-to-consumer work only works with safeguards.
+              </p>
+              <p className="takeaway-line2">
+                Verification, offers, and payment protection
+              </p>
               <p className="takeaway-line2">make independence feel credible.</p>
             </div>
           </div>
         </section>
 
-      {/* So who is Joey for? (Ref Frame 417 + Frame 374 paths) */}
-      <section className="who-is-joey-section">
-        <h2 className="who-is-joey-title">So who is Joey for?</h2>
-        <img
-          src="/who-is-joey-for.svg"
-          alt="Two user personas: Armiya (Homeowner) and Maya (Tradesworker) with descriptions"
-          className="who-is-joey-svg"
-        />
-        <div className="user-paths" role="img" aria-label="Homeowner path and Tradesworker path flowcharts">
-          <div className="user-path">
-            <h3 className="user-path-title">Homeowner path</h3>
-            <div className="user-path-steps">
-              <div className="user-path-step">Sign up</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Create job with AI help (images + notes)</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Matched list of workers</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Chat</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Offer</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Escrow-style payment</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Job completion</div>
+        {/* So who is Joey for? (Ref Frame 417 + Frame 374 paths) */}
+        <section className="who-is-joey-section">
+          <h2 className="who-is-joey-title">So who is Joey for?</h2>
+          <img
+            src="/who-is-joey-for.svg"
+            alt="Two user personas: Armiya (Homeowner) and Maya (Tradesworker) with descriptions"
+            className="who-is-joey-svg"
+          />
+          <div
+            className="user-paths"
+            role="img"
+            aria-label="Homeowner path and Tradesworker path flowcharts"
+          >
+            <div className="user-path">
+              <h3 className="user-path-title">Homeowner path</h3>
+              <div className="user-path-steps">
+                <div className="user-path-step">Sign up</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">
+                  Create job with AI help (images + notes)
+                </div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Matched list of workers</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Chat</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Offer</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Escrow-style payment</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Job completion</div>
+              </div>
+            </div>
+            <div className="user-path">
+              <h3 className="user-path-title">Tradesworker path</h3>
+              <div className="user-path-steps">
+                <div className="user-path-step">Sign up</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Submit credentials</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">
+                  AI-assisted verification summary
+                </div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Profile build</div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">
+                  Portfolio (photos/videos + work history)
+                </div>
+                <div className="user-path-arrow" aria-hidden="true">
+                  ↓
+                </div>
+                <div className="user-path-step">Ready to receive requests</div>
+              </div>
             </div>
           </div>
-          <div className="user-path">
-            <h3 className="user-path-title">Tradesworker path</h3>
-            <div className="user-path-steps">
-              <div className="user-path-step">Sign up</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Submit credentials</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">AI-assisted verification summary</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Profile build</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Portfolio (photos/videos + work history)</div>
-              <div className="user-path-arrow" aria-hidden="true">↓</div>
-              <div className="user-path-step">Ready to receive requests</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tradesworker journey – LOFI: 5 screen images (1–5.png) */}
-      <section className="tradesworker-lofi-section">
-        <h2 className="tradesworker-lofi-title">Tradesworker journey</h2>
-        <div className="tradesworker-lofi-panel">
-          <div className="tradesworker-lofi-screens">
-            <div className="lofi-screen-placeholder">
-              <img src="/1.png" alt="Verifying you – LOFI screen" className="lofi-screen-img" />
-            </div>
-            <div className="lofi-screen-placeholder">
-              <img src="/2.png" alt="Your Portfolio – LOFI screen" className="lofi-screen-img" />
-            </div>
-            <div className="lofi-screen-placeholder">
-              <img src="/3.png" alt="Profile Preview – LOFI screen" className="lofi-screen-img" />
-            </div>
-            <div className="lofi-screen-placeholder">
-              <img src="/4.png" alt="AI help – LOFI screen" className="lofi-screen-img" />
-            </div>
-            <div className="lofi-screen-placeholder">
-              <img src="/5.png" alt="Welcome, Joe – LOFI screen" className="lofi-screen-img" />
+        {/* Tradesworker journey – LOFI: 5 screen images (1–5.png) */}
+        <section className="tradesworker-lofi-section">
+          <h2 className="tradesworker-lofi-title">Tradesworker journey</h2>
+          <div className="tradesworker-lofi-panel">
+            <div className="tradesworker-lofi-screens">
+              <div className="lofi-screen-placeholder">
+                <img
+                  src="/1.png"
+                  alt="Verifying you – LOFI screen"
+                  className="lofi-screen-img"
+                />
+              </div>
+              <div className="lofi-screen-placeholder">
+                <img
+                  src="/2.png"
+                  alt="Your Portfolio – LOFI screen"
+                  className="lofi-screen-img"
+                />
+              </div>
+              <div className="lofi-screen-placeholder">
+                <img
+                  src="/3.png"
+                  alt="Profile Preview – LOFI screen"
+                  className="lofi-screen-img"
+                />
+              </div>
+              <div className="lofi-screen-placeholder">
+                <img
+                  src="/4.png"
+                  alt="AI help – LOFI screen"
+                  className="lofi-screen-img"
+                />
+              </div>
+              <div className="lofi-screen-placeholder">
+                <img
+                  src="/5.png"
+                  alt="Welcome, Joe – LOFI screen"
+                  className="lofi-screen-img"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* How my design changed with research & feedback (Ref: Trust/Job/Pay phone SVGs) */}
-      <section className="design-change-section">
-        <h2 className="design-change-main-title">How my design changed with research & feedback:</h2>
+        {/* How my design changed with research & feedback (Ref: Trust/Job/Pay phone SVGs) */}
+        <section className="design-change-section">
+          <h2 className="design-change-main-title">
+            How my design changed with research & feedback:
+          </h2>
 
-        <div className="design-change-block design-change-block--text-left">
-          <div className="design-change-text">
-            <h3 className="design-change-subtitle">Worker creates a profile that builds trust</h3>
-            <p className="design-change-body">
-              Research showed homeowners make decisions using proof, not promises. I designed the profile preview to surface credibility at a glance, with a clear identity, role, and space for past work so homeowners can choose with confidence.
-            </p>
-          </div>
-          <div className="design-change-phone">
-            <div className="design-change-phone-frame">
-              <img src="/trust-phone.png" alt="Profile Preview screen: Maya, Drywaller, ratings and credibility badges" className="design-change-phone-img" />
+          <div className="design-change-block design-change-block--text-left">
+            <div className="design-change-text">
+              <h3 className="design-change-subtitle">
+                Worker creates a profile that builds trust
+              </h3>
+              <p className="design-change-body">
+                Research showed homeowners make decisions using proof, not
+                promises. I designed the profile preview to surface credibility
+                at a glance, with a clear identity, role, and space for past
+                work so homeowners can choose with confidence.
+              </p>
+            </div>
+            <div className="design-change-phone">
+              <div className="design-change-phone-frame">
+                <img
+                  src="/trust-phone.png"
+                  alt="Profile Preview screen: Maya, Drywaller, ratings and credibility badges"
+                  className="design-change-phone-img"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="design-change-block design-change-block--phone-left">
-          <div className="design-change-phone">
-            <div className="design-change-phone-frame">
-              <img src="/job-phone.png" alt="AI help screen: structured job request with Title, Description, Price range, Possible pictures" className="design-change-phone-img" />
+          <div className="design-change-block design-change-block--phone-left">
+            <div className="design-change-phone">
+              <div className="design-change-phone-frame">
+                <img
+                  src="/job-phone.png"
+                  alt="AI help screen: structured job request with Title, Description, Price range, Possible pictures"
+                  className="design-change-phone-img"
+                />
+              </div>
+            </div>
+            <div className="design-change-text">
+              <h3 className="design-change-subtitle">
+                AI Help turns a vague post into a clear job request
+              </h3>
+              <p className="design-change-body">
+                Early AI output felt like a blob of text. I redesigned it into
+                structured sections so homeowners see exactly what the AI
+                suggested and can add each part to their listing.
+              </p>
+              <p className="design-change-label">What I changed</p>
+              <ul className="design-change-list">
+                <li>Structured output into Title, Description, Price range</li>
+                <li>
+                  Added Add to listing actions so the user stays in control
+                </li>
+                <li>
+                  Added a &quot;Possible pictures&quot; section so the AI can
+                  request missing visuals
+                </li>
+                <li>
+                  Added a space for follow-up questions to improve accuracy
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="design-change-text">
-            <h3 className="design-change-subtitle">AI Help turns a vague post into a clear job request</h3>
-            <p className="design-change-body">
-              Early AI output felt like a blob of text. I redesigned it into structured sections so homeowners see exactly what the AI suggested and can add each part to their listing.
-            </p>
-            <p className="design-change-label">What I changed</p>
-            <ul className="design-change-list">
-              <li>Structured output into Title, Description, Price range</li>
-              <li>Added Add to listing actions so the user stays in control</li>
-              <li>Added a &quot;Possible pictures&quot; section so the AI can request missing visuals</li>
-              <li>Added a space for follow-up questions to improve accuracy</li>
-            </ul>
-          </div>
-        </div>
 
-        <div className="design-change-block design-change-block--text-left">
-          <div className="design-change-text">
-            <h3 className="design-change-subtitle">Escrow style payment that protects both sides</h3>
-            <p className="design-change-body">
-              Research highlighted that workers often don’t get paid on time—or at all. I designed payment to be held upfront but released only after job completion, so the worker knows the money is secured and the homeowner isn’t charged until they’re satisfied.
-            </p>
-            <p className="design-change-body">
-              This keeps pricing fair, reduces disputes, and reinforces trust for both sides.
-            </p>
-          </div>
-          <div className="design-change-phone">
-            <div className="design-change-phone-frame">
-              <img src="/pay-phone.png" alt="Payment screen: Summary, payment methods, Pay button" className="design-change-phone-img" />
+          <div className="design-change-block design-change-block--text-left">
+            <div className="design-change-text">
+              <h3 className="design-change-subtitle">
+                Escrow style payment that protects both sides
+              </h3>
+              <p className="design-change-body">
+                Research highlighted that workers often don’t get paid on
+                time—or at all. I designed payment to be held upfront but
+                released only after job completion, so the worker knows the
+                money is secured and the homeowner isn’t charged until they’re
+                satisfied.
+              </p>
+              <p className="design-change-body">
+                This keeps pricing fair, reduces disputes, and reinforces trust
+                for both sides.
+              </p>
+            </div>
+            <div className="design-change-phone">
+              <div className="design-change-phone-frame">
+                <img
+                  src="/pay-phone.png"
+                  alt="Payment screen: Summary, payment methods, Pay button"
+                  className="design-change-phone-img"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Hop to it. Results – HIFI screens (Ref: HIFI.svg) */}
-      <section className="hifi-results-section">
-        <h2 className="hifi-results-title">Hop to it. Results</h2>
-        <img
-          src="/hifis-screens.png"
-          alt="Five HIFI Joey app screens: Welcome Maya dashboard, Jobs list, Describe your issue to AI, Listing detail, Account profile"
-          className="hifi-results-svg"
-        />
-        <p className="hifi-results-caption">
-          While this was a school project, feedback consistently pointed to improvements after iteration: the profile became easier to trust at a glance, the AI output became easier to read and act on, the offer stage reduced ambiguity around price and terms, more tag options for filtering, stripe payment, better performance results, and many more changes that shaped joey into a fully designed app.
-        </p>
-      </section>
+        {/* Hop to it. Results – HIFI screens (Ref: HIFI.svg) */}
+        <section className="hifi-results-section">
+          <h2 className="hifi-results-title">Hop to it. Results</h2>
+          <img
+            src="/hifis-screens.png"
+            alt="Five HIFI Joey app screens: Welcome Maya dashboard, Jobs list, Describe your issue to AI, Listing detail, Account profile"
+            className="hifi-results-svg"
+          />
+          <p className="hifi-results-caption">
+            While this was a school project, feedback consistently pointed to
+            improvements after iteration: the profile became easier to trust at
+            a glance, the AI output became easier to read and act on, the offer
+            stage reduced ambiguity around price and terms, more tag options for
+            filtering, stripe payment, better performance results, and many more
+            changes that shaped joey into a fully designed app.
+          </p>
+        </section>
 
-      {/* Outcome & what I learned (Ref: Frame 425.svg) */}
-      <section className="outcome-section">
-        <div className="outcome-two-col">
-          <div className="outcome-left">
-            <h2 className="outcome-title">Outcome & what I learned</h2>
-            <p className="outcome-body">
-              This project also reinforced something I do not get when designing solo. Product design only becomes real when it can be built, and that means staying aligned with developers from the start. I had to think beyond screens and consider how components, states, and data would actually work in a live system, then adjust designs so they were easier to implement and less fragile on the backend.
-            </p>
-            <p className="outcome-body">
-              My wonderful dev team brought my designs to life in a fully working prototype. Joey was connected end-to-end with a real backend, and our AI features were functional in the build, not just mocked up.
-            </p>
-            <a href="#watch-video" className="outcome-watch-btn" aria-label="Watch Joey video">
-              <span className="outcome-play-icon" aria-hidden="true" />
-              Watch Video
-            </a>
-          </div>
-          <div className="outcome-right">
-            <h3 className="outcome-joey-is">Joey is...</h3>
-            <div className="outcome-phone-wrap">
-              <div className="outcome-phone-mockup" aria-hidden="true" />
+        {/* Outcome & what I learned (Ref: Frame 425.svg) */}
+        <section className="outcome-section">
+          <div className="outcome-two-col">
+            <div className="outcome-left">
+              <h2 className="outcome-title">Outcome & what I learned</h2>
+              <p className="outcome-body">
+                This project also reinforced something I do not get when
+                designing solo. Product design only becomes real when it can be
+                built, and that means staying aligned with developers from the
+                start. I had to think beyond screens and consider how
+                components, states, and data would actually work in a live
+                system, then adjust designs so they were easier to implement and
+                less fragile on the backend.
+              </p>
+              <p className="outcome-body">
+                My wonderful dev team brought my designs to life in a fully
+                working prototype. Joey was connected end-to-end with a real
+                backend, and our AI features were functional in the build, not
+                just mocked up.
+              </p>
+              <a
+                href="#watch-video"
+                className="outcome-watch-btn"
+                aria-label="Watch Joey video"
+              >
+                <span className="outcome-play-icon" aria-hidden="true" />
+                Watch Video
+              </a>
             </div>
-            <p className="outcome-tagline">An AI platform that connects homeowners &amp; skilled workers.</p>
+            <div className="outcome-right">
+              <div className="case-study-media case-study-media--lg">
+                <img
+                  src="/joeydocassets/jois.png"
+                  alt="Joey is an AI platform that connects homeowners and skilled workers"
+                  className="joey-outcome-image"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Case study nav: back to home / next case study */}
-      <nav className="case-study-nav" aria-label="Case study navigation">
-        <Link to="/" className="case-study-nav-link case-study-nav-link--home">
-          Back to home
-        </Link>
-        <Link to="/casestudy-project2" className="case-study-nav-link case-study-nav-link--next">
-          Next case study
-        </Link>
-      </nav>
-
+        {/* Case study nav: back to home / next case study */}
+        <nav className="case-study-nav" aria-label="Case study navigation">
+          <Link
+            to="/"
+            className="case-study-nav-link case-study-nav-link--home"
+          >
+            Back to home
+          </Link>
+          <Link
+            to="/casestudy-project2"
+            className="case-study-nav-link case-study-nav-link--next"
+          >
+            Next: DinoCode
+          </Link>
+        </nav>
       </div>
       {/* End Case Study Document Container */}
     </div>

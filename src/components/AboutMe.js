@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AboutMe.css';
 
 const ICONS = [
@@ -16,27 +16,73 @@ const ICONS = [
   { src: '/skillsloop/blender.svg',            alt: 'Blender' },
 ];
 
-const IconRow = ({ size, reverse }) => (
-  <div className="skills-ticker-wrap">
-    <div className={`skills-ticker ${reverse ? 'skills-ticker--reverse' : ''}`}>
-      {[...ICONS, ...ICONS].map((icon, i) => (
-        <img
-          key={i}
-          src={icon.src}
-          alt={icon.alt}
-          className="ticker-icon"
-          style={{ width: size, height: size }}
-          draggable="false"
-        />
-      ))}
+const ICON_GAP = 18;
+
+const TICKER_BASE_DURATION = 48; // minimum seconds for one full loop
+const TICKER_PX_PER_SEC = 40; // target scroll speed
+
+const useTickerRepeats = (wrapRef, iconSize) => {
+  const [repeatCount, setRepeatCount] = useState(2);
+  const [duration, setDuration] = useState(TICKER_BASE_DURATION);
+
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!wrap) return undefined;
+
+    const update = () => {
+      const viewport = wrap.clientWidth;
+      const setWidth = ICONS.length * (iconSize + ICON_GAP);
+      const setsToCover = Math.max(2, Math.ceil(viewport / setWidth) + 2);
+      const evenSets = setsToCover % 2 === 0 ? setsToCover : setsToCover + 1;
+      setRepeatCount(evenSets);
+      const loopWidth = (setWidth * evenSets) / 2;
+      setDuration(Math.max(TICKER_BASE_DURATION, loopWidth / TICKER_PX_PER_SEC));
+    };
+
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(wrap);
+    window.addEventListener('resize', update);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', update);
+    };
+  }, [wrapRef, iconSize]);
+
+  return { repeatCount, duration };
+};
+
+const IconRow = ({ size, reverse }) => {
+  const wrapRef = useRef(null);
+  const { repeatCount, duration } = useTickerRepeats(wrapRef, size);
+  const icons = Array.from({ length: repeatCount }, () => ICONS).flat();
+
+  return (
+    <div ref={wrapRef} className="skills-ticker-wrap">
+      <div
+        className={`skills-ticker ${reverse ? 'skills-ticker--reverse' : ''}`}
+        style={{ animationDuration: `${duration}s` }}
+      >
+        {icons.map((icon, i) => (
+          <img
+            key={`${icon.src}-${i}`}
+            src={icon.src}
+            alt={icon.alt}
+            className="ticker-icon"
+            style={{ width: size, height: size }}
+            draggable="false"
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const AboutMe = () => (
   <section id="about-me" className="about-me">
 
-    <IconRow size={112} reverse={false} />
+    <IconRow size={80} reverse={false} />
 
     <div className="about-content">
       <div className="about-text">
@@ -74,7 +120,7 @@ const AboutMe = () => (
       </div>
     </div>
 
-    <IconRow size={112} reverse={true} />
+    <IconRow size={80} reverse={true} />
 
   </section>
 );

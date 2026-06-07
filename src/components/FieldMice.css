@@ -1,0 +1,204 @@
+/* Field Mice — lightweight case study (logo + cards, no heavy Joey layout) */
+
+.fm-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding-top: var(--nav-height, 4.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  --fm-gutter: clamp(1.5rem, 5vw, 4.375rem);
+  --fm-band: 75rem;
+  --fm-purple: #b8a0d4;
+  --fm-purple-deep: #6a50a0;
+  --fm-sage: #7a8a5a;
+  --fm-cream: #e8e4d0;
+  --fm-text: #3a3040;
+}
+
+.fm-hero {
+  background: linear-gradient(180deg, var(--fm-purple) 0%, #c9b8e0 45%, #fff 100%);
+  padding: clamp(2.5rem, 6vw, 4rem) var(--fm-gutter) clamp(2rem, 4vw, 3rem);
+}
+
+.fm-hero-inner {
+  max-width: var(--fm-band);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.fm-logo-wrap {
+  width: min(420px, 100%);
+  filter: drop-shadow(0 8px 20px rgba(58, 48, 64, 0.2));
+}
+
+.fm-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fm-lede {
+  max-width: 42rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.75;
+  color: var(--fm-text);
+}
+
+.fm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.fm-tag {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: var(--radius-sm, 8px);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--fm-purple-deep);
+}
+
+.fm-play-btn {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--fm-purple-deep);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-sm, 8px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.fm-play-btn:hover {
+  background: #5a4090;
+  transform: translateY(-1px);
+}
+
+.fm-body {
+  max-width: var(--fm-band);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--fm-gutter) 0;
+}
+
+.fm-section + .fm-section {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.fm-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--fm-purple-deep);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.fm-text {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #444;
+  max-width: 52rem;
+}
+
+.fm-text + .fm-text {
+  margin-top: 1rem;
+}
+
+.fm-text--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.fm-card-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.fm-card-item {
+  border-radius: var(--radius-sm, 8px);
+  overflow: hidden;
+  background: var(--fm-cream);
+  box-shadow: 0 4px 14px rgba(58, 48, 64, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fm-card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(58, 48, 64, 0.14);
+}
+
+.fm-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fm-card-item--trump {
+  position: relative;
+}
+
+.fm-card-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  background: linear-gradient(transparent, rgba(58, 48, 64, 0.75));
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.fm-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: 2rem;
+  border-top: 1px solid #ddd6e8;
+}
+
+.fm-nav-link {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fm-purple-deep);
+  background: #fff;
+  border: 2px solid var(--fm-purple-deep);
+  border-radius: var(--radius-sm, 8px);
+  text-decoration: none;
+}
+
+.fm-nav-link:hover {
+  background: #f7f3fc;
+}
+
+.fm-nav-link--next {
+  background: var(--fm-purple-deep);
+  color: #fff;
+}
+
+.fm-nav-link--next:hover {
+  background: #5a4090;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .fm-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
